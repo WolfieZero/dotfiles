@@ -3,20 +3,38 @@
 " ==============================================================================
 
 " load plugins from vundle
-" ------------------------------------------------------------------------------
-"source ~/dotfiles/vim/plugins.vim
+" ==============================================================================
+source ~/dotfiles/vim/plugins.vim
 
 
 " Spelling corrections
-" ------------------------------------------------------------------------------
+" ==============================================================================
 abbr funciton function
-abbr teh the
+abbr fucntion function
 abbr tempalte template
 abbr fitler filter
 
 
-set nocompatible " not compatible with vi
-set autoread " detect when a file is changed
+" Options
+" ==============================================================================
+
+set nocompatible	" not compatible with vi
+set encoding=utf-8  " set encoding
+set autoread		" detect when a file is changed
+
+
+" Syntax
+" ------------------------------------------------------------------------------
+filetype plugin on  " Detect filetype
+syntax enable       " Enable syntax highighting
+
+colorscheme hybrid_material
+
+
+" Set relevant filetypes
+" ------------------------------------------------------------------------------
+au BufRead,BufNewFile *.scss set filetype=css
+au BufRead,BufNewFile *.md set filetype=markdown
 
 
 " make backspace behave in a sane manner
@@ -24,15 +42,55 @@ set autoread " detect when a file is changed
 set backspace=indent,eol,start
 
 
-" Tab control
+" Tab, Indents and Lines
 " ------------------------------------------------------------------------------
-set noexpandtab " insert tabs rather than spaces for <Tab>
-set smarttab " tab respects 'tabstop', 'shiftwidth', and 'softtabstop'
-set tabstop=4 " the visible width of tabs
-set softtabstop=4 " edit as if the tabs are 4 characters wide
-set shiftwidth=4 " number of spaces to use for indent and unindent
-set shiftround " round indent to a multiple of 'shiftwidth'
-set completeopt+=longest
+filetype plugin indent on
+
+" 4 spaces please
+set expandtab
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
+
+" Round indent to nearest multiple of 4
+set shiftround
+
+" No line-wrapping
+set nowrap
+
+
+" Interactions
+" ------------------------------------------------------------------------------
+
+" Start scrolling slightly before the cursor reaches an edge
+set scrolloff=5
+set sidescrolloff=5
+
+" Scroll sideways a character at a time, rather than a screen at a time
+set sidescroll=1
+
+" Allow motions and back-spacing over line-endings etc
+set backspace=indent,eol,start
+set whichwrap=h,l,b,<,>,~,[,]
+
+" Underscores denote words
+set iskeyword-=_
+
+
+" Visuals
+" ------------------------------------------------------------------------------
+set laststatus=2    " Show status line
+set showmode        " Show what mode you’re currently in file
+set showcmd         " Show what commands you’re typing
+set modeline        " Allow modelines
+set ruler           " Show current line and column position in
+set title           " Show file title in terminal tab
+set number          " Show line numbers
+set cursorline      " Highlight current line
+set nohlsearch      " Don’t keep results highlighted after searching...
+set incsearch       " ...just highlight as we type
+set ignorecase      " Ignore case when searching...
+set smartcase       " ...except if we input a capital letter
 
 
 " Mouse options
@@ -48,104 +106,13 @@ endif
 set ttyfast
 
 
-" highlight conflicts
+" Shortcuts
+" ==============================================================================
+
+" NERDTree
 " ------------------------------------------------------------------------------
-match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
+map <C-\> :NERDTreeToggle<CR>
 
-" file type specific settings
+" Emmet
 " ------------------------------------------------------------------------------
-if has('autocmd') && !exists('autocommands_loaded')
-    let autocommands_loaded = 1
-    autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
-    autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
-    autocmd FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
-    autocmd FileType html setlocal ts=4 sts=4 sw=4 noexpandtab indentkeys-=*<return>
-    autocmd FileType jade setlocal ts=2 sts=2 sw=2 noexpandtab
-    autocmd FileType *.md.js :call SyntasticReset<cr>
-    autocmd FileType markdown,textile setlocal textwidth=0 wrapmargin=0 wrap spell
-    autocmd FileType .xml exe ":silent %!xmllint --format --recover - 2>/dev/null"
-    autocmd FileType crontab setlocal nobackup nowritebackup
-    "autocmd WinEnter * setlocal cursorline
-    "autocmd WinLeave * setlocal nocursorline
-
-    " automatically resize panes on resize
-    autocmd VimResized * exe 'normal! \<c-w>='
-    autocmd BufWritePost .vimrc source %
-    autocmd BufWritePost .vimrc.local source %
-    " save all files on focus lost, ignoring warnings about untitled buffers
-    autocmd FocusLost * silent! wa
-
-    autocmd BufNewFile,BufRead *.ejs set filetype=html
-    autocmd BufNewFile,BufRead *.ino set filetype=c
-    autocmd BufNewFile,BufRead *.svg set filetype=xml
-
-    " make quickfix windows take all the lower section of the screen when there
-    " are multiple windows open
-    autocmd FileType qf wincmd J
-
-    autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-    let g:markdown_fenced_languages = ['css', 'javascript', 'js=javascript', 'json=javascript', 'stylus', 'html']
-
-    " autocmd! BufEnter * call ApplyLocalSettings(expand('<afile>:p:h'))
-endif
-
-" code folding settings
-set foldmethod=syntax " fold based on indent
-set foldnestmax=10 " deepest fold is 10 levels
-set nofoldenable " don't fold by default
-set foldlevel=1
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => User Interface
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-set so=7 " set 7 lines to the cursors - when moving vertical
-set wildmenu " enhanced command line completion
-set hidden " current buffer can be put into background
-set showcmd " show incomplete commands
-set noshowmode " don't show which mode disabled for PowerLine
-set wildmode=list:longest " complete files like a shell
-set scrolloff=3 " lines of text around cursor
-set shell=$SHELL
-set cmdheight=1 " command bar height
-
-set title " set terminal title
-
-" Searching
-set ignorecase " case insensitive searching
-set smartcase " case-sensitive if expresson contains a capital letter
-set hlsearch
-set incsearch " set incremental search, like modern browsers
-set nolazyredraw " don't redraw while executing macros
-
-set magic " Set magic on, for regex
-
-set showmatch " show matching braces
-set mat=2 " how many tenths of a second to blink
-
-" error bells
-set noerrorbells
-set visualbell
-set t_vb=
-set tm=500
-
-" switch syntax highlighting on
-syntax on
-
-set encoding=utf8
-let base16colorspace=256  " Access colors present in 256 colorspace"
-set t_Co=256 " Explicitly tell vim that the terminal supports 256 colors"
-"execute "set background=".$BACKGROUND
-"execute "colorscheme ".$THEME
-
-" set number " show line numbers
-" set relativenumber " show relative line numbers
-set number " show the current line number"
-
-set wrap "turn on line wrapping
-set wrapmargin=8 " wrap lines when coming within n characters from side
-set linebreak " set soft wrapping
-set showbreak=… " show ellipsis at breaking
-
-set autoindent " automatically set indent of new line
-set smartindent
+let g:user_emmet_leader_key='<C-:>'

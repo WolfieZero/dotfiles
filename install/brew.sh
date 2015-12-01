@@ -15,7 +15,6 @@ brew install tree
 brew install wget
 
 # development server setup
-brew install nginx
 brew install dnsmasq
 
 # development tools
@@ -30,8 +29,5 @@ brew install nvm
 brew install z
 brew install markdown
 brew install php56 php56-mcrypt php56-xdebug
-
-# install neovim
-brew install neovim/neovim/neovim
 
 exit 0
