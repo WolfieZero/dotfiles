@@ -27,6 +27,7 @@ mv composer.phar /usr/local/bin/composer
 echo "Config Vim setup"
 ln -s ${DOTFILES}/vimrc ${HOME}/.vimrc
 git clone https://github.com/VundleVim/Vundle.vim.git ${DOTFILES}/vim/bundle/Vundle.vim
+vim +PluginInstall +qall
 
 echo "Configuring (oh my) zsh as default shell"
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
