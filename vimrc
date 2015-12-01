@@ -91,6 +91,8 @@ set nohlsearch      " Don’t keep results highlighted after searching...
 set incsearch       " ...just highlight as we type
 set ignorecase      " Ignore case when searching...
 set smartcase       " ...except if we input a capital letter
+set guioptions-=r   " Removes right hand scroll bar
+set go-=L           " Removes left hand scroll bar
 
 
 " Mouse options
