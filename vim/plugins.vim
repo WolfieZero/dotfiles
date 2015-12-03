@@ -28,7 +28,12 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'bling/vim-airline'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'mattn/emmet-vim'
-Bundle 'jistr/vim-nerdtree-tabs'
+Plugin 'jistr/vim-nerdtree-tabs'
+
+
+" Theme
+
+Plugin 'jdkanani/vim-material-theme'
 
 
 " Close it all off

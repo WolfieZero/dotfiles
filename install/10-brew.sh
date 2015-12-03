@@ -25,9 +25,9 @@ brew install reattach-to-user-namespace
 brew install tmux
 brew install zsh
 brew install highlight
-brew install nvm
-brew install z
 brew install markdown
 brew install php56 php56-mcrypt php56-xdebug
 
-exit 0
+# apps
+brew install caskroom/cask/brew-cask
+brew linkapps macvim

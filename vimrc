@@ -27,8 +27,19 @@ set autoread		" detect when a file is changed
 " ------------------------------------------------------------------------------
 filetype plugin on  " Detect filetype
 syntax enable       " Enable syntax highighting
+set background=dark
+set t_Co=256
 
-colorscheme hybrid_material
+let g:airline_powerline_fonts = 1
+
+if !has('gui_running')
+    syntax on
+    let g:onedark_termcolors = 16
+    let g:airline_theme='onedark'
+    colorscheme onedark
+else
+    colorscheme material-theme
+endif
 
 
 " Set relevant filetypes
