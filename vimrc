@@ -27,19 +27,22 @@ set autoread		" detect when a file is changed
 " ------------------------------------------------------------------------------
 filetype plugin on  " Detect filetype
 syntax enable       " Enable syntax highighting
-set background=dark
-set t_Co=256
+"syntax on
 
+" Setup fonts
 let g:airline_powerline_fonts = 1
+set guifont=Sauce\ Code\ Powerline\ Light:h11
+
+set t_Co=256
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 if !has('gui_running')
-    syntax on
-    let g:onedark_termcolors = 16
-    let g:airline_theme='onedark'
-    colorscheme onedark
-else
-    colorscheme material-theme
+    let g:onedark_termcolors=16
 endif
+
+set background=dark
+
+colorscheme onedark
 
 
 " Set relevant filetypes
@@ -90,7 +93,7 @@ set iskeyword-=_
 
 " Visuals
 " ------------------------------------------------------------------------------
-set laststatus=2    " Show status line
+"set laststatus=2    " Show status line
 set showmode        " Show what mode you’re currently in file
 set showcmd         " Show what commands you’re typing
 set modeline        " Allow modelines
@@ -110,7 +113,7 @@ set go-=L           " Removes left hand scroll bar
 " ------------------------------------------------------------------------------
 if has('mouse')
     set mouse=a
-    set ttymouse=xterm2
+""    set ttymouse=xterm2
 endif
 
 

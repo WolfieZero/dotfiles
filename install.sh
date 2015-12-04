@@ -39,17 +39,12 @@ if [ "$(uname)" == "Darwin" ]; then
     notice_start
     echo "Brewing all the things"
     notice_end
-    source install/10-brew.sh
+    source install/10-tools.sh
 
     notice_start
     echo "Updating OSX settings"
     notice_end
     source install/20-osx.sh
-
-    notice_start
-    echo "Install OSX apps"
-    notice_end
-    source install/30-apps.sh
 fi
 
 notice_start
@@ -69,6 +64,8 @@ ln -s ${DOTFILES}/vimrc ${HOME}/.vimrc
 ln -s ${DOTFILES}/vim ${HOME}/.vim
 git clone https://github.com/VundleVim/Vundle.vim.git ${DOTFILES}/vim/bundle/Vundle.vim
 vim +PluginInstall +qall
+
+cd ${DOTFILES}/vim/at
 
 notice_start
 echo "Configuring (oh my) zsh as default shell"
