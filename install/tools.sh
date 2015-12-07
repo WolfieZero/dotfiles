@@ -39,8 +39,8 @@ brew install caskroom/cask/brew-cask
 
 echo ""
 echo "Installing powerline fonts"
-git clone https://github.com/powerline/fonts.git $DOTFILES/powerline-fonts
-cd $DOTFILES/powerline-fonts
+git clone https://github.com/powerline/fonts.git $ $HOME/dotfiles/powerline-fonts
+cd $HOME/dotfiles/powerline-fonts
 ./install.sh
 cd ..
 rm -rf powerline-fonts
@@ -48,10 +48,7 @@ rm -rf powerline-fonts
 echo ""
 echo "Installing server type stuff"
 brew install dnsmasq
-
-echo ""
-echo "Linking dnsmasq config into place"
-ln -s $DOTFILES/hosts/dnsmasq.conf /usr/local/etc/
+ln -s $HOME/dotfiles/hosts/dnsmasq.conf /usr/local/etc/dnsmasq.conf
 
 echo ""
 echo "Setup dnsmasq"

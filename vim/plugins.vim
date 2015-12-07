@@ -24,16 +24,13 @@ Plugin 'VundleVim/Vundle.vim'
 " ==============================================================================
 
 Plugin 'scrooloose/nerdtree'
+Plugin 'xuyuanp/nerdtree-git-plugin'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'bling/vim-airline'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'mattn/emmet-vim'
 Plugin 'jistr/vim-nerdtree-tabs'
-
-
-" Theme
-
-Plugin 'jdkanani/vim-material-theme'
+Plugin 'kien/ctrlp.vim'
 
 
 " Close it all off
