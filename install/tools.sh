@@ -46,11 +46,6 @@ cd ..
 rm -rf powerline-fonts
 
 echo ""
-echo "Installing server type stuff"
-brew install dnsmasq
-ln -s $HOME/dotfiles/hosts/dnsmasq.conf /usr/local/etc/dnsmasq.conf
-
-echo ""
 echo "Setup dnsmasq"
 sudo cp -fv /usr/local/opt/dnsmasq/homebrew.mxcl.dnsmasq.plist /Library/LaunchDaemons
 sudo launchctl load /Library/LaunchDaemons/homebrew.mxcl.dnsmasq
