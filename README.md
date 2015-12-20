@@ -1,6 +1,5 @@
 # Dotfiles
 
-Welcome to my world. This is a collection of vim, tmux, and zsh configurations. Interested in a video walkthrough of the dotfiles? Check out my talk, [vim + tmux](https://www.youtube.com/watch?v=5r6yzFEXajQ).
 
 
 ## Initial Setup and Installation
