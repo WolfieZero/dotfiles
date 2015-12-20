@@ -8,6 +8,7 @@ If on OSX, you will need to install the XCode CLI tools before continuing. To do
 
 ```bash
 xcode-select --install
+sudo xcodebuild -license
 ```
 
 May need to setup git, best practice for this is to do the following
