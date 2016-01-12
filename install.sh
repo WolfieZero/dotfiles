@@ -46,6 +46,12 @@ if [ "$(uname)" == "Darwin" ]; then
     notice_end
     source install/osx.sh
 
+    notice_start
+    echo "Symlink JS config files"
+    notice_end
+    ln -s ${HOME}/dotfiles/jscsrc ${HOME}/.jscsrc
+    ln -s ${HOME}/dotfiles/jshintrc ${HOME}/.jshintrc
+
 fi
 
 notice_start
