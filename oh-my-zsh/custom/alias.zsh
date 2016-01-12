@@ -22,3 +22,5 @@ alias gfp="git fetch --all && git reset --hard origin/master && git pull"
 alias docker-login="bash --login '/Applications/Docker/Docker Quickstart Terminal.app/Contents/Resources/Scripts/start.sh'"
 
 alias compose="php -dzend_extension=xdebug.so /usr/local/bin/composer"
+
+alias server="browser-sync start --server --files '**/*.*' --no-notify --no-open"
