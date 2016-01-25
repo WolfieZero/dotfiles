@@ -31,7 +31,8 @@ brew install tmux
 brew install zsh
 brew install highlight
 brew install markdown
-brew install php56 php56-mcrypt php56-xdebug
+brew install php56 --with-mysql 
+brew install php56-mcrypt php56-xdebug
 
 echo ""
 echo "Installing app (and tapping)"
