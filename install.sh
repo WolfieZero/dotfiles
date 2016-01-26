@@ -59,6 +59,7 @@ echo "Install composer"
 notice_end_header
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
+composer global require hirak/prestissimo
 
 source install/vim.sh
 
