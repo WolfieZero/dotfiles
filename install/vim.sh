@@ -16,6 +16,9 @@ ln -s ${HOME}/dotfiles/vim ${HOME}/.vim
 echo "Remove Neovim configs"
 rm -rf ${HOME}/.config/nvim
 
+echo "Make the config directory"
+mkdir ${HOME}/.config
+
 echo "Link Neovim to Vim configs"
 ln -s ${HOME}/dotfiles/vim ${HOME}/.config/nvim
 ln -s ${HOME}/dotfiles/vimrc ${HOME}/dotfiles/vim/init.vim

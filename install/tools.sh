@@ -40,13 +40,8 @@ brew install caskroom/cask/brew-cask
 
 echo ""
 echo "Installing powerline fonts"
-git clone https://github.com/powerline/fonts.git $ $HOME/dotfiles/powerline-fonts
+git clone https://github.com/powerline/fonts.git $HOME/dotfiles/powerline-fonts
 cd $HOME/dotfiles/powerline-fonts
 ./install.sh
 cd ..
 rm -rf powerline-fonts
-
-echo ""
-echo "Setup dnsmasq"
-sudo cp -fv /usr/local/opt/dnsmasq/homebrew.mxcl.dnsmasq.plist /Library/LaunchDaemons
-sudo launchctl load /Library/LaunchDaemons/homebrew.mxcl.dnsmasq
