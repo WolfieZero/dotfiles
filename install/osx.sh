@@ -15,6 +15,9 @@ defaults write NSGlobalDomain AppleFontSmoothing -int 2
 echo "Automatically hide and show the Dock"
 defaults write com.apple.dock autohide -bool true
 
+echo "Show the Dock immediately when hovering to show"
+defaults write com.apple.dock autohide-time-modifier -int 0
+
 echo "Use current directory as default search scope in Finder"
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 

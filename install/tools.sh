@@ -25,13 +25,12 @@ pip install --upgrade pip setuptools
 brew install git
 brew install hub
 brew install macvim --env-std --override-system-vim
-brew install neovim
 brew install reattach-to-user-namespace
 brew install tmux
 brew install zsh
 brew install highlight
 brew install markdown
-brew install php56 --with-mysql 
+brew install php56 --with-mysql
 brew install php56-mcrypt php56-xdebug
 
 echo ""

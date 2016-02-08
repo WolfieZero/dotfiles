@@ -24,3 +24,6 @@ alias docker-login="bash --login '/Applications/Docker/Docker Quickstart Termina
 alias compose="php -dzend_extension=xdebug.so /usr/local/bin/composer"
 
 alias server="browser-sync start --server --files '**/*.*' --no-notify --no-open"
+
+alias vim="mvim"
+alias v="vim"
