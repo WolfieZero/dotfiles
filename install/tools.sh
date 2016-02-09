@@ -30,8 +30,15 @@ brew install tmux
 brew install zsh
 brew install highlight
 brew install markdown
-brew install php56 --with-mysql
-brew install php56-mcrypt php56-xdebug
+brew install php70 --with-mysql
+brew install php70-mcrypt #php70-xdebug
+
+# for php70
+mkdir -p ~/Library/LaunchAgents
+cp /usr/local/opt/php70/homebrew.mxcl.php70.plist ~/Library/LaunchAgents/
+launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.php70.plist
+ln -sfv /usr/local/opt/php70/*.plist ~/Library/LaunchAgents
+launchctl load ~/Library/LaunchAgents/homebrew.mxcl.php70.plist
 
 echo ""
 echo "Installing app (and tapping)"
@@ -44,3 +51,9 @@ cd $HOME/dotfiles/powerline-fonts
 ./install.sh
 cd ..
 rm -rf powerline-fonts
+
+
+#echo ""
+#echo "Install php-fmt"
+#git clone https://github.com/phpfmt/fmt.git $HOME/dotfiles/bin/fmt
+#ln -s ${HOME}/dotfiles/bin/fmt/fmt.phar /usr/local/bin/fmt.phar
