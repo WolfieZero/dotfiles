@@ -9,7 +9,7 @@ export DOTFILES=${HOME}/dotfiles
 export ZSH=${HOME}/.oh-my-zsh
 
 # Set name of the theme to load.
-ZSH_THEME="zero"
+ZSH_THEME="boom"
 
 # Would you like to use another custom folder than $ZSH/custom?
 ZSH_CUSTOM=${DOTFILES}/oh-my-zsh/custom
