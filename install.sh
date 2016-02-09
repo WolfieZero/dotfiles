@@ -59,7 +59,12 @@ echo "Install composer"
 notice_end_header
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
+composer global require fabpot/php-cs-fixer
+composer global require laravel/installer
+composer global require laravel/spark-installer
+composer global require laravel/lumen-installer
 composer global require hirak/prestissimo
+composer global require phpfmt/fmt
 
 source install/vim.sh
 
