@@ -5,8 +5,8 @@
 local git_info='$(git_prompt_info)'
 ZSH_THEME_GIT_PROMPT_PREFIX=" %{$reset_color%} git:%{$fg[cyan]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[red]%}X"
-ZSH_THEME_GIT_PROMPT_CLEAN=" %{$fg[green]%}O"
+ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[red]%}×"
+ZSH_THEME_GIT_PROMPT_CLEAN=" %{$fg[green]%}✓"
 
 PROMPT="
 %{$terminfo[bold]$fg[white]%}%~%{$reset_color%}\

@@ -1,4 +1,5 @@
 {
+    "preset": "jquery",
     "requireCurlyBraces": [
         "if", "else", "for", "while", "do", "try",
         "catch"
@@ -13,6 +14,8 @@
     "requireSpacesInAnonymousFunctionExpression": {
         "beforeOpeningCurlyBrace": true
     },
+    "requireSpacesInsideBrackets": false,
+    "requireSpacesInsideParentheses": false,
     "requireSpacesInNamedFunctionExpression": {
         "beforeOpeningCurlyBrace": true
     },
@@ -25,7 +28,7 @@
     "disallowSpacesInFunctionDeclaration": {
         "beforeOpeningRoundBrace": true
     },
-    "disallowMultipleVarDecl": true,
+    "disallowMultipleVarDecl": false,
     "requireBlocksOnNewline": true,
     "disallowEmptyBlocks": true,
     "disallowQuotedKeysInObjects": "allButReserved",
