@@ -17,8 +17,6 @@ alias oldtop="/usr/bin/top"
 
 alias tinkerme="git clone https://github.com/WolfieZero/tinker.git"
 
-alias gfp="git fetch --all && git reset --hard origin/master && git pull"
-
 alias docker-login="bash --login '/Applications/Docker/Docker Quickstart Terminal.app/Contents/Resources/Scripts/start.sh'"
 
 alias compose="php -dzend_extension=xdebug.so /usr/local/bin/composer"
