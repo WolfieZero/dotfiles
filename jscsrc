@@ -46,6 +46,7 @@
         "with"
     ],
     "disallowMultipleLineStrings": true,
+    "disallowMultipleLineBreaks": false,
     "validateQuoteMarks": {
         "mark": "'",
         "escape": true
