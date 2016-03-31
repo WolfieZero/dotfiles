@@ -39,9 +39,9 @@ set softtabstop=4
 " Visuals
 " ==============================================================================
 
-colorscheme atom-dark
+colorscheme onedark
 set t_CO=256					                " Use 256 colours in terminal
-set guifont=Sauce_Code_Powerline_Light:h12
+set guifont=source_code_pro_light:h12
 "set macligatures				                " Pretty symbols when available
 set guioptions-=e				                " Don't use GUI tabs
 set guioptions-=l
@@ -50,6 +50,11 @@ set guioptions-=r
 set guioptions-=R
 "set laststatus=2
 set cursorline
+
+hi LineNr guifg=#404040 guibg=bg
+
+" Hide the visual split
+hi vertsplit guifg=bg guibg=bg
 
 
 " Split Management
