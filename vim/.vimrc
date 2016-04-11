@@ -67,40 +67,52 @@ nmap <C-L> <C-W><C-L>
 " Search
 " ==============================================================================
 
+" highlight matching search options
 set hlsearch
+" highlight matching search options as we type
 set incsearch
 
 
 " Mappings
 " ==============================================================================
 
-" make it easy to edit the .vimrc file
+" ,ev  >>  make it easy to edit the .vimrc file
 nmap <Leader>ev :tabedit $MYVIMRC<cr>
 
-" make it east to edit the .gvimrc file
+" ,eg  >>  make it east to edit the .gvimrc file
 nmap <Leader>eg :tabedit ~/.gvimrc<cr>
 
-" edit the notes file
-nmap <Leader>vh :tabedit ~/dotfiles/vim/Notes<cr>
+" ,vh  >>  edit the notes file
+nmap <Leader>vh :tabedit ~/dotfiles/vim/Notes.md<cr>
 
-" edit the plugins file
+" ,ep  >>  edit the plugins file
 nmap <Leader>ep :tabedit ~/dotfiles/vim/plugins.vim<cr>
 
-" simple search highlight removal
+" ,[space]  >>  simple search highlight removal (case when doing a search not
+"               required anymore)
 nmap <Leader><space> :nohlsearch<cr>
 
-" easily move tabs 
+" [cmd] + [return]  >>  easily move tabs 
 nmap <D-Return> gt<cr>
 
-" make NERDTree easier to toggle
+" [cmd] + \  >>  make NERDTree easier to toggle
 nmap <D-\> :NERDTreeToggle<cr>
 
+" ,f  >>  search files using CTags
+nmap <Leader>f :tag<space>
+
+
 " CtrlP functions
+" ==============================================================================
+
+" [cmd] + p  >>  search files
 nmap <D-p> :CtrlP<cr>
+" [cmd] + r  >>  search current buffer
 nmap <D-r> :CtrlPBufTag<cr>
+" [cmd] + e  >>  view history of files 
 nmap <D-e> :CtrlPMRUFiles<cr>
 
-" search files using CTags
+" ,f  >>  search files using CTags
 nmap <Leader>f :tag<space>
 
 

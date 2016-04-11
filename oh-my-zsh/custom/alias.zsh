@@ -25,5 +25,5 @@ alias compose="php -dzend_extension=xdebug.so /usr/local/bin/composer"
 
 alias server="browser-sync start --server --files '**/*.*' --no-notify --no-open"
 
-alias vim="mvim"
-alias v="vim"
+alias v="mvim"
+#alias vim="mvim"

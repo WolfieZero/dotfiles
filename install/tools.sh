@@ -9,7 +9,6 @@ fi
 echo ""
 echo "Tapping brews"
 brew tap homebrew/php
-brew tap neovim/neovim
 
 echo ""
 echo "Installing cli tools"
@@ -31,7 +30,7 @@ brew install zsh
 brew install highlight
 brew install markdown
 brew install php70 --with-mysql
-brew install php70-mcrypt #php70-xdebug
+brew install php70-mcrypt php70-xdebug
 
 # for php70
 mkdir -p ~/Library/LaunchAgents
