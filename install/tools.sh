@@ -31,6 +31,7 @@ brew install highlight
 brew install markdown
 brew install php70 --with-mysql
 brew install php70-mcrypt php70-xdebug
+brew install rsync
 
 # for php70
 mkdir -p ~/Library/LaunchAgents

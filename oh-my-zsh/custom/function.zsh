@@ -14,3 +14,12 @@ function gitreset() {
     git reset --hard FETCH_HEAD
     git clean -df
 }
+
+function gfp() {
+    echo "FORCE PULL"
+    echo "=========="
+    echo " "
+    git fetch --all
+    git reset --hard origin/master
+    git pull $1
+}
