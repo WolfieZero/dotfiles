@@ -25,6 +25,7 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$PATH"
 
 # Composer
 export PATH="$PATH:$HOME/.composer/vendor/bin"
+export PATH="$PATH:./vendor/bin"
 
 # Homebrew casks
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
