@@ -19,6 +19,7 @@ alias js="/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/R
 
 alias server="browser-sync start --server --files '**/*.*' --no-notify --no-open"
 alias serverphp="php -S localhost:1337"
+alias serverproxy="browser-sync start --no-notify --no-inject-changes --no-ghost-mode --no-open --proxy $1"
 
 #alias top="vtop"
 alias oldtop="/usr/bin/top"
