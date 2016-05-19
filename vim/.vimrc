@@ -39,7 +39,7 @@ set softtabstop=4
 " Visuals
 " ==============================================================================
 
-colorscheme onedark
+colorscheme base16-ocean
 set t_CO=256					                " Use 256 colours in terminal
 set guifont=source_code_pro_light:h12
 "set macligatures				                " Pretty symbols when available
