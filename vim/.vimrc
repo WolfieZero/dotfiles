@@ -39,10 +39,16 @@ set softtabstop=4
 " Visuals
 " ==============================================================================
 
-colorscheme base16-ocean
+set term=xterm
 set t_CO=256					                " Use 256 colours in terminal
+
+if has('gui_running')
+    colorscheme onedark
+else
+    colorscheme base16-ocean
+endif
+
 set guifont=source_code_pro_light:h12
-"set macligatures				                " Pretty symbols when available
 set guioptions-=e				                " Don't use GUI tabs
 set guioptions-=l
 set guioptions-=L
@@ -97,7 +103,7 @@ nmap <Leader>ep :tabedit ~/dotfiles/vim/plugins.vim<cr>
 "               required anymore)
 nmap <Leader><space> :nohlsearch<cr>
 
-" [cmd] + [return]  >>  easily move tabs 
+" [cmd] + [return]  >>  easily move tabs
 nmap <D-Return> gt<cr>
 
 " [cmd] + \  >>  make NERDTree easier to toggle
@@ -114,7 +120,7 @@ nmap <Leader>f :tag<space>
 nmap <D-p> :CtrlP<cr>
 " [cmd] + r  >>  search current buffer
 nmap <D-r> :CtrlPBufTag<cr>
-" [cmd] + e  >>  view history of files 
+" [cmd] + e  >>  view history of files
 nmap <D-e> :CtrlPMRUFiles<cr>
 
 " ,f  >>  search files using CTags
@@ -141,6 +147,3 @@ let g:ctrlp_match_window = 'bottom,min:1,max:30,results:10'
 " ==============================================================================
 
 let NERDTreeHijackNetrw = 0
-
-
-
