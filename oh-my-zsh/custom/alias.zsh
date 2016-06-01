@@ -1,4 +1,6 @@
+alias v="vim"
 alias e="atom"
+alias mv="mvim"
 
 alias box="~/Dropbox"
 alias c="clear"
@@ -27,7 +29,5 @@ alias oldtop="/usr/bin/top"
 alias tinkerme="git clone https://github.com/WolfieZero/tinker.git"
 
 alias compose="php -dzend_extension=xdebug.so /usr/local/bin/composer"
-
-alias v="mvim"
 
 alias scotchbox="wget https://raw.githubusercontent.com/scotch-io/scotch-box/master/Vagrantfile"

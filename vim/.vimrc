@@ -7,7 +7,6 @@
 " ==============================================================================
 
 source ~/dotfiles/vim/plugins.vim
-"source ~/dotfiles/vim/theme.vim
 
 
 " Spelling corrections
@@ -22,14 +21,28 @@ abbr fitler filter
 " Options
 " ==============================================================================
 
-syntax enable
+" Make backspace act like a normal editor
+set backspace=indent,eol,start
 
-set backspace=indent,eol,start		" make backspace act like a normal editor
-set number				            " show line numbers
-set linespace=5				        " set pixel spacing between lines
+" Show line numbers
+set number
 
-let mapleader = ','			        " changes the default leader from`\` to `,`
+" Set pixel spacing between lines
+set linespace=5
 
+" Leader is `,`
+let mapleader=','
+
+" Leader is ` ` (space)
+"let mapleader="\<Space>"
+
+" Use Vim features, not Vi
+set nocompatible
+
+" Use good encoding etiquette
+set encoding=utf-8
+
+" Tabbing to be 4 spaces
 set expandtab
 set shiftwidth=4
 set tabstop=4
@@ -39,17 +52,28 @@ set softtabstop=4
 " Visuals
 " ==============================================================================
 
-set term=xterm
-set t_CO=256					                " Use 256 colours in terminal
-
-if has('gui_running')
-    colorscheme onedark
-else
-    colorscheme base16-ocean
+" Use 24-bit (true-color) mode in Vim when outside tmux.
+if (empty($TMUX))
+    if (has('termguicolors'))
+        set termguicolors
+    endif
 endif
 
+" Enable syntax highlighting
+syntax enable
+
+" Use 256 colours in terminal
+set t_CO=256
+
+" Set colour scheme
+let g:onedark_termcolors=16
+colorscheme onedark
+
+" Set font face
 set guifont=source_code_pro_light:h12
-set guioptions-=e				                " Don't use GUI tabs
+
+" Don't use GUI tabs
+set guioptions-=e
 set guioptions-=l
 set guioptions-=L
 set guioptions-=r

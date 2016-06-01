@@ -34,9 +34,10 @@ p   >>  paste current
 
 ## Search file
 
-/[text]   >>  search within file
-n         >>  goto next occurance in file 
-,[space]  >>  remove highlighting
+/[text]    >>  search within file
+n          >>  goto next occurance in file 
+,[space]   >>  remove highlighting
+:[number]  >>  goto line number 120
 
 
 
