@@ -28,7 +28,7 @@ set backspace=indent,eol,start
 set number
 
 " Set pixel spacing between lines
-set linespace=5
+"set linespace=4
 
 " Leader is `,`
 let mapleader=','
@@ -47,6 +47,9 @@ set expandtab
 set shiftwidth=4
 set tabstop=4
 set softtabstop=4
+
+
+set laststatus=2
 
 
 " Visuals
@@ -69,8 +72,12 @@ set t_CO=256
 let g:onedark_termcolors=16
 colorscheme onedark
 
+" Show file title in terminal tab
+set title
+
 " Set font face
-set guifont=source_code_pro_light:h12
+set guifont=sauce_code_powerline_light:h12
+
 
 " Don't use GUI tabs
 set guioptions-=e
@@ -85,6 +92,12 @@ hi LineNr guifg=#404040 guibg=bg
 
 " Hide the visual split
 hi vertsplit guifg=bg guibg=bg
+
+" Powerline
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ''
+let g:airline#extensions#tabline#left_alt_sep = ''
 
 
 " Split Management
@@ -118,7 +131,7 @@ nmap <Leader>ev :tabedit $MYVIMRC<cr>
 nmap <Leader>eg :tabedit ~/.gvimrc<cr>
 
 " ,vh  >>  edit the notes file
-nmap <Leader>vh :tabedit ~/dotfiles/vim/Notes.md<cr>
+nmap <Leader>vn :tabedit ~/dotfiles/vim/Notes.md<cr>
 
 " ,ep  >>  edit the plugins file
 nmap <Leader>ep :tabedit ~/dotfiles/vim/plugins.vim<cr>
@@ -127,14 +140,19 @@ nmap <Leader>ep :tabedit ~/dotfiles/vim/plugins.vim<cr>
 "               required anymore)
 nmap <Leader><space> :nohlsearch<cr>
 
-" [cmd] + [return]  >>  easily move tabs
-nmap <D-Return> gt<cr>
+" [sapce] + ]  >>  next tab
+nmap <C-l> :tabn<cr>
+nmap <C-k> :tabp<cr>
+
 
 " [cmd] + \  >>  make NERDTree easier to toggle
-nmap <D-\> :NERDTreeToggle<cr>
+nmap <Space>\ :NERDTreeToggle<cr>
 
 " ,f  >>  search files using CTags
 nmap <Leader>f :tag<space>
+
+
+nmap <Leader>n :NERDTreeTabsToggle<cr>
 
 
 " CtrlP functions

@@ -7,6 +7,9 @@ k  >>  up
 j  >>  down
 h  >>  left
 l  >>  right
+w  >>  move to start of next work
+e  >>  move to end of current or next word
+b  >>  move ot start of current or next word 
 
 
 # Modes

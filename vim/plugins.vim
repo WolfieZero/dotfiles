@@ -25,6 +25,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-vinegar'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
+"Plugin 'vim-airline/vim-airline'
+Plugin 'editorconfig/editorconfig-vim'
 
 
 " Close it all off
