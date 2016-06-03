@@ -3,13 +3,14 @@
 
 ## Move Around
 
-k  >>  up
-j  >>  down
-h  >>  left
-l  >>  right
-w  >>  move to start of next work
-e  >>  move to end of current or next word
-b  >>  move ot start of current or next word 
+k   >>  up
+j   >>  down
+h   >>  left
+l   >>  right
+w   >>  move to start of next work
+e   >>  move to end of current or next word
+b   >>  move ot start of current or previous word 
+ge  >>  move to end of next word
 
 
 # Modes
