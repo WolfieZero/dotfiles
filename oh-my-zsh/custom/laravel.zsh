@@ -2,25 +2,35 @@
 # Laravel
 # ==============================================================================
 
+
+# Aliases
+# ==============================================================================
+
 alias artisan="php artisan"
 
+
+# Homestead
+# ==============================================================================
 
 function homestead() {
     case "$1" in
         'edit')
-            v ~/.homestead/Homestead.yaml
+            vim ~/.homestead/Homestead.yaml
         ;;
         'up')
-            cd ~/Homestead && vagrant up
+            (cd ~/VagrantBoxes/Homestead; vagrant up)
         ;;
         'reload')
-            cd ~/Homestead && vagrant reload
+            (cd ~/VagrantBoxes/Homestead; vagrant reload)
         ;;
         'provision')
-            cd ~/Homestead && vagrant reload --provision
+            (cd ~/VagrantBoxes/Homestead; vagrant reload --provision)
         ;;
         'ssh')
-            cd ~/Homestead && vagrant ssh
+            (cd ~/VagrantBoxes/Homestead; vagrant ssh)
+        ;;
+        'update')
+            (cd ~/VagrantBoxes/Homestead; vagrant box update)
         ;;
     esac
 }
