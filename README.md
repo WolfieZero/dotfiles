@@ -1,7 +1,6 @@
 # Dotfiles
 
 
-
 ## Initial Setup and Installation
 
 If on OSX, you will need to install the XCode CLI tools before continuing. To do so, open a terminal and type

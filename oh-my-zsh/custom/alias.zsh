@@ -24,3 +24,5 @@ alias tinkerme="git clone https://github.com/WolfieZero/tinker.git"
 alias compose="php -dzend_extension=xdebug.so /usr/local/bin/composer"
 
 alias scotchbox="wget https://raw.githubusercontent.com/scotch-io/scotch-box/master/Vagrantfile"
+
+alias vhosts="e /etc/apache2/extra/httpd-vhosts.conf"
