@@ -8,6 +8,8 @@
 
 alias artisan="php artisan"
 
+alias valetopen="e ~/.valet"
+
 
 # Homestead
 # ==============================================================================

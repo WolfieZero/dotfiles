@@ -7,6 +7,8 @@ alias c="clear"
 alias code="~/Dropbox/Code"
 alias apps="~/Dropbox/Code/App"
 alias webs="~/Dropbox/Code/Web"
+alias tool="~/Dropbox/Code/Tools"
+alias tools=tool
 
 alias delete="rm -rf $1"
 
