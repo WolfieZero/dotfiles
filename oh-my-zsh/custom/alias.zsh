@@ -14,6 +14,7 @@ alias delete="rm -rf $1"
 
 alias editdotfiles="e ~/.dotfiles"
 
+# compress to-file.tar this-folder
 alias compress='tar -jcvf $1 $2'
 alias uncompress='tar -jxvf $1'
 
