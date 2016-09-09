@@ -32,6 +32,7 @@ brew cask install transmit
 brew cask install dropbox
 brew cask install macdown
 brew cask install helium
+brew cask install nimble
 brew cask install skitch
 brew cask install fluid
 brew cask install franz
@@ -49,9 +50,12 @@ brew cask install imagealpha
 brew cask install imageoptim
 brew cask install virtualbox
 brew cask install sequel-pro
+brew cask install postman
 brew cask install vagrant
 brew cask install iterm2
 brew cask install atom
+
+brew cask install gzdoom
 
 
 # Quick look plugins
