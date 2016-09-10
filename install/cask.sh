@@ -66,10 +66,10 @@ brew cask install steam
 # Quick look plugins
 # ==============================================================================
 
-brew caks install 'quicklook-json'
-brew caks install 'qlmarkdown'
-brew caks install 'quicklook-csv'
-brew caks install 'betterzipql'
+brew cask install 'quicklook-json'
+brew cask install 'qlmarkdown'
+brew cask install 'quicklook-csv'
+brew cask install 'betterzipql'
 
 
 ## Tidy up
