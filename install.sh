@@ -49,7 +49,7 @@ if [ "$(uname)" == "Darwin" ]; then
     notice_start
     echo "Pumping in some casks"
     notice_end
-    source install/node.sh
+    source install/cask.sh
 
     notice_start
     echo "Updating OSX settings"
