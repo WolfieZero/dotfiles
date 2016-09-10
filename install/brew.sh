@@ -13,6 +13,7 @@ brew upgrade
 
 # Tap installers
 brew tap homebrew/dupes
+brew tap homebrew/versions
 brew tap josegonzalez/homebrew-php
 
 # Install GNU core utilities (those that come with OS X are outdated)
