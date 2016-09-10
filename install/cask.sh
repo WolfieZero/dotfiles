@@ -23,7 +23,6 @@ brew cask install the-unarchiver
 brew cask install google-chrome
 brew cask install appcleaner
 brew cask install cheatsheet
-brew cask install 1password
 brew cask install ubersicht
 brew cask install caffeine
 brew cask install skyfonts
