@@ -44,17 +44,12 @@ if [ "$(uname)" == "Darwin" ]; then
     notice_start
     echo "Grabbing some Ruby(s)"
     notice_end
-    source install/node.sh
+    source install/ruby.sh
 
     notice_start
     echo "Pumping in some casks"
     notice_end
     source install/node.sh
-
-#    notice_start
-#    echo "Tooling all the things"
-#    notice_end
-#    source install/tools.sh
 
     notice_start
     echo "Updating OSX settings"
@@ -72,7 +67,7 @@ if [ "$(uname)" == "Darwin" ]; then
     cd ${HOME}
 
     notice_start
-    echo "Symlink JS config files"
+    echo "Symlink files & folders"
     notice_end
     rm -f ${HOME}/.jscsrc
     rm -f ${HOME}/.jshintrc

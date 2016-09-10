@@ -11,12 +11,17 @@ brew update
 # Upgrade any already-installed formulae
 brew upgrade
 
+# Tap installers
+brew tap homebrew/dupes
+brew tap josegonzalez/homebrew-php
+
 # Install GNU core utilities (those that come with OS X are outdated)
-brew install coreutils
-echo "Don’t forget to add $(brew --prefix coreutils)/libexec/gnubin to \$PATH."
+#brew install coreutils
+#echo "Don’t forget to add $(brew --prefix coreutils)/libexec/gnubin to \$PATH."
 
 brew install macvim --env-std --override-system-vim
 brew install imagemagick
+brew install watchman
 brew install rsync
 brew install wget
 brew install node
@@ -26,9 +31,7 @@ brew install vim
 brew install zsh
 
 # Install PHP with MariaDB
-brew tap homebrew/dupes
 brew install homebrew/dupes/grep
-brew tap josegonzalez/homebrew-php
 brew install mariadb
 brew install php70 --with-mysql
 brew install php70-imagick php70-mcrypt php70-xdebug

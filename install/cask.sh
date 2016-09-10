@@ -19,7 +19,6 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 # Personal
 # ==============================================================================
 
-brew cask install bettertouchtool
 brew cask install the-unarchiver
 brew cask install google-chrome
 brew cask install appcleaner
@@ -31,7 +30,6 @@ brew cask install skyfonts
 brew cask install transmit
 brew cask install dropbox
 brew cask install macdown
-brew cask install helium
 brew cask install nimble
 brew cask install skitch
 brew cask install fluid
@@ -55,7 +53,12 @@ brew cask install vagrant
 brew cask install iterm2
 brew cask install atom
 
+
+# Gaming
+# ==============================================================================
+
 brew cask install gzdoom
+brew cask install steam
 
 
 # Quick look plugins
