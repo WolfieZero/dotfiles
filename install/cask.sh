@@ -37,6 +37,8 @@ brew cask install numi
 brew cask install seil
 brew cask install vlc
 
+open /usr/local/Homebrew/Caskroom/skyfonts/
+
 
 # Dev
 # ==============================================================================
