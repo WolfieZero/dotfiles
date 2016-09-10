@@ -57,6 +57,7 @@ brew cask install atom
 # Gaming
 # ==============================================================================
 
+brew cask install openemu
 brew cask install gzdoom
 brew cask install steam
 
