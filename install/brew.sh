@@ -31,11 +31,11 @@ brew install git
 brew install vim
 brew install zsh
 
-# Install PHP with MariaDBbrew install homebrew/dupes/grep
+# Install PHP with MariaDB
 brew install homebrew/dupes/grep
 brew install mariadb
-#brew install php70 --with-mysql --without-apache --with-fpm
-#brew install php70-imagick php70-mcrypt php70-xdebug
+brew install php70 --with-mysql --without-apache --with-fpm
+brew install php70-imagick php70-mcrypt php70-xdebug
 brew install josegonzalez/php/composer
 
 # Tidy it all up

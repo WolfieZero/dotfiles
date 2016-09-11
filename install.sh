@@ -87,4 +87,6 @@ cd ..
 rm -rf powerline-fonts
 cd ${HOME}
 
+source ${HOME}/.zshrc
+
 echo "Done."
