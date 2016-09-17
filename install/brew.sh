@@ -38,5 +38,8 @@ brew install php70 --with-mysql --without-apache --with-fpm
 brew install php70-imagick php70-mcrypt php70-xdebug
 brew install josegonzalez/php/composer
 
+# Post-Install stuffs
+brew services start mariadb
+
 # Tidy it all up
 brew cleanup
