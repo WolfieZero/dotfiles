@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+# Install NVM
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
+
+nvm install node
+
 npm config set prefix '~/.npm-packages'
 
 npm install -g npm-check-updates
