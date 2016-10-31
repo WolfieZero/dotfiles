@@ -20,7 +20,6 @@ brew install imagemagick
 brew install watchman
 brew install rsync
 brew install wget
-brew install node
 brew install tmux
 brew install git
 brew install vim
