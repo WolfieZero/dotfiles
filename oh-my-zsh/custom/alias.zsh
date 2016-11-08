@@ -10,7 +10,7 @@ alias webs="~/Dropbox/Code/Web"
 alias tool="~/Dropbox/Code/Tools"
 alias tools=tool
 
-alias delete="rm -rf $1"
+alias del="rm -rf $1"
 
 alias editdotfiles="e ~/.dotfiles"
 
