@@ -13,6 +13,7 @@ alias tool="~/Dropbox/Code/Tools"
 alias tools=tool
 
 alias del="rm -rf $1"
+alias delete=del
 
 alias editdotfiles="e ~/.dotfiles"
 
