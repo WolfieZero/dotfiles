@@ -1,4 +1,12 @@
-function fixssh() {
+# ==============================================================================
+# Terminal Functions
+# ==============================================================================
+
+
+# Fix SSH pemissions
+# ==============================================================================
+
+function fix-ssh() {
     echo 'Fixing ssh permissions'
     sudo chmod 600 ~/.ssh/id_rsa
     sudo chmod 600 ~/.ssh/id_rsa.pub
@@ -8,17 +16,12 @@ function fixssh() {
     sudo chmod 755 ~/.ssh
 }
 
-function gitreset() {
-    echo 'Resetting git repo to last commit'
-    git fetch origin master
-    git reset --hard FETCH_HEAD
-    git clean -df
-}
+
+# Force pull on git
+# ==============================================================================
 
 function gfp() {
-    echo "FORCE PULL"
-    echo "=========="
-    echo " "
+    echo "Git force pull"
     git fetch --all
     git reset --hard origin/master
     git pull $1

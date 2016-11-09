@@ -10,18 +10,37 @@ xcode-select --install
 sudo xcodebuild -license
 ```
 
-May need to setup git, best practice for this is to do the following
+### Install Mac Brew and Git
 
 ```bash
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew install git
-cd
-git clone https://github.com/WolfieZero/dotfiles.git
+cd && git clone https://github.com/WolfieZero/dotfiles.git
 ```
 
-Once done you can run install
+### Install Everything Else
+
+Once done you can run the following (best to do one-by-one):
 
 ```bash
-cd dotfiles
-./install.sh
+bash ~/dotfiles/install/0--ohmyzsh.sh
+bash ~/dotfiles/install/1--brew.sh
+bash ~/dotfiles/install/2--cask.sh
+bash ~/dotfiles/install/3--node.sh
+bash ~/dotfiles/install/4--ruby.sh
+bash ~/dotfiles/install/5--composer.sh
+bash ~/dotfiles/install/6--osx.sh
+bash ~/dotfiles/install/7--powerlinefonts.sh
+bash ~/dotfiles/install/8--symlinks.sh
+```
+
+Best to do one-by-one as some with cause terminal to restart.
+
+### Extra Stuff
+
+Run the following:
+
+```bash
+bash ~/dotfiles/install/vim.sh
+bash ~/dotfiles/install/games.sh
 ```

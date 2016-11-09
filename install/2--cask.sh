@@ -37,8 +37,6 @@ brew cask install numi
 brew cask install seil
 brew cask install vlc
 
-/usr/local/Caskroom/skyfonts/5.6.0.0/SkyFonts.app
-
 
 # Dev
 # ==============================================================================
@@ -53,14 +51,6 @@ brew cask install postman
 brew cask install vagrant
 brew cask install iterm2
 brew cask install atom
-
-
-# Gaming
-# ==============================================================================
-
-brew cask install openemu
-brew cask install gzdoom
-brew cask install steam
 
 
 # Quick look plugins
