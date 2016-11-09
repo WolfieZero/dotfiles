@@ -1,6 +1,8 @@
 alias v="vim"
 alias e="atom"
 
+alias torme="bash ~/dotfiles/torme.sh"
+
 alias box="~/Dropbox"
 alias c="clear"
 
