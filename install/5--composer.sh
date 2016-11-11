@@ -20,6 +20,7 @@ composer global require hirak/prestissimo
 # All the rest
 # ==============================================================================
 
+composer global require "squizlabs/php_codesniffer=*"
 composer global require laravel/installer
 composer global require laravel/lumen-installer
 composer global require laravel/valet
