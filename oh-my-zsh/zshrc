@@ -20,6 +20,11 @@ fi
 # Would you like to use another custom folder than $ZSH/custom?
 ZSH_CUSTOM=${DOTFILES}/oh-my-zsh/custom
 
+# Additional private configs
+for config_file (${HOME}/Dropbox/oh-my-zsh/*.zsh(N)); do
+  source $config_file
+done
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
