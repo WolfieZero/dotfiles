@@ -32,6 +32,7 @@ bash ~/dotfiles/install/5--composer.sh
 bash ~/dotfiles/install/6--osx.sh
 bash ~/dotfiles/install/7--powerlinefonts.sh
 bash ~/dotfiles/install/8--symlinks.sh
+bash ~/dotfiles/install/9--python.sh
 ```
 
 Best to do one-by-one as some with cause terminal to restart.

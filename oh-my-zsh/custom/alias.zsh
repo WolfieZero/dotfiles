@@ -23,7 +23,10 @@ alias box="~/Dropbox"
 alias code="~/Dropbox/Code"
 alias apps="~/Dropbox/Code/App"
 alias webs="~/Dropbox/Code/Web"
+alias boom="~/Dropbox/Code/Boom"
 alias tool="~/Dropbox/Code/Tools"
+
+alias web=webs
 alias tools=tool
 
 

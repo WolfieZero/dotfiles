@@ -29,4 +29,5 @@ npm install -g npm-cache
 npm install -g grunt-cli
 npm install -g gulp-cli
 npm install -g cordova
+npm install -g eslint
 npm install -g bower
