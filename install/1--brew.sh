@@ -29,14 +29,12 @@ brew upgrade
 #brew install coreutils
 #echo "Don’t forget to add $(brew --prefix coreutils)/libexec/gnubin to \$PATH."
 
-brew install macvim --env-std --with-override-system-vim
 brew install imagemagick
 brew install watchman
 brew install rsync
 brew install wget
 brew install tmux
 brew install git
-brew install vim
 brew install zsh
 
 
