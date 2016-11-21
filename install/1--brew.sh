@@ -32,10 +32,7 @@ brew upgrade
 brew install imagemagick
 brew install watchman
 brew install rsync
-brew install wget
 brew install tmux
-brew install git
-brew install zsh
 
 
 # Install PHP with MariaDB
