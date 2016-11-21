@@ -20,7 +20,6 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 # ==============================================================================
 
 brew cask install the-unarchiver
-brew cask install google-chrome
 brew cask install appcleaner
 brew cask install cheatsheet
 brew cask install ubersicht
