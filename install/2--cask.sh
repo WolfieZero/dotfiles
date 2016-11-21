@@ -29,11 +29,9 @@ brew cask install transmit
 brew cask install dropbox
 brew cask install macdown
 brew cask install nimble
-brew cask install skitch
 brew cask install fluid
 brew cask install franz
 brew cask install numi
-brew cask install seil
 brew cask install vlc
 
 
