@@ -14,13 +14,13 @@ brew install vim
 rm -rf ${HOME}/.vim
 rm -rf ${HOME}/.vimrc
 rm -rf ${HOME}/.gvimrc
-rm -rf ${HOME}/dotfiles/vim/bundle
+rm -rf ${HOME}/dotfiles/vim/vim/bundle
 
 
 # Link Vim configs to dotfiles
 # ==============================================================================
 
-ln -s ${HOME}/dotfiles/vim ${HOME}/.vim # vim folder
+ln -s ${HOME}/dotfiles/vim/vim ${HOME}/.vim # vim folder
 ln -s ${HOME}/dotfiles/vim/.vimrc ${HOME}/.vimrc # vim file
 ln -s ${HOME}/dotfiles/vim/.gvimrc ${HOME}/.gvimrc # vim file
 

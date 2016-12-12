@@ -20,7 +20,8 @@ alias torme="bash ~/dotfiles/torme.sh"
 # ==============================================================================
 
 alias box="~/Dropbox"
-alias code="~/Dropbox/Code"
+alias codebox="~/Dropbox/Code"
+
 alias apps="~/Dropbox/Code/App"
 alias webs="~/Dropbox/Code/Web"
 alias boom="~/Dropbox/Code/Boom"
