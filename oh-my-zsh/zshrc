@@ -26,10 +26,10 @@ for config_file (${HOME}/Dropbox/oh-my-zsh/*.zsh(N)); do
 done
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Custom plugins may be added to ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(brew docker git laravel osx vagrant zsh-syntax-highlighting)
+plugins=(zsh-syntax-highlighting)
 
 # User configuration
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$PATH"
@@ -41,7 +41,6 @@ export PATH="$PATH:./vendor/bin"
 # Node
 export PATH="$PATH:$HOME/.npm-packages/bin"
 export PATH="$PATH:./node_modules/.bin"
-
 
 # Homebrew casks
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
