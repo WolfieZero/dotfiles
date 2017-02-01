@@ -6,23 +6,47 @@
 # Fix SSH pemissions
 # ==============================================================================
 
-function fix-ssh() {
-    echo 'Fixing ssh permissions'
-    sudo chmod 600 ~/.ssh/id_rsa
-    sudo chmod 600 ~/.ssh/id_rsa.pub
-    sudo chmod 600 ~/.ssh/id_dsa
-    sudo chmod 600 ~/.ssh/id_dsa.pub
-    sudo chmod 644 ~/.ssh/known_hosts
-    sudo chmod 755 ~/.ssh
-}
+
+    function fix-ssh() {
+        echo 'Fixing ssh permissions'
+        sudo chmod 600 ~/.ssh/id_rsa
+        sudo chmod 600 ~/.ssh/id_rsa.pub
+        sudo chmod 600 ~/.ssh/id_dsa
+        sudo chmod 600 ~/.ssh/id_dsa.pub
+        sudo chmod 644 ~/.ssh/known_hosts
+        sudo chmod 755 ~/.ssh
+    }
 
 
 # Force pull on git
 # ==============================================================================
 
-function gfp() {
-    echo "Git force pull"
-    git fetch --all
-    git reset --hard origin/master
-    git pull $1
-}
+
+    function gfp() {
+        echo "Git force pull"
+        git fetch --all
+        git reset --hard origin/master
+        git pull $1
+    }
+
+
+# Dotfiles
+# ==============================================================================
+
+
+    DOTFILES=${HOME}/dotfiles
+
+    function dotfiles() {
+        case "$1" in
+            'edit')
+                e ~/dotfiles
+            ;;
+            'reload')
+                source ~/.zshrc
+            ;;
+            *)
+                echo 'edit    -  edit the dotfiles';
+                echo 'reload  -  sources the profile';
+            ;;
+        esac
+    }
