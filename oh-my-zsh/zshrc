@@ -21,7 +21,7 @@ fi
 ZSH_CUSTOM=${DOTFILES}/oh-my-zsh/custom
 
 # Additional private configs
-for config_file (${HOME}/Dropbox/oh-my-zsh/*.zsh(N)); do
+for config_file (${HOME}/Dropbox/syslocal/oh-my-zsh/*.zsh(N)); do
   source $config_file
 done
 
