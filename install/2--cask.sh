@@ -23,31 +23,31 @@ brew cask install the-unarchiver
 brew cask install appcleaner
 brew cask install cheatsheet
 brew cask install ubersicht
-brew cask install caffeine
+#brew cask install caffeine
 brew cask install skyfonts
-brew cask install transmit
-brew cask install dropbox
+#brew cask install dropbox
 brew cask install macdown
-brew cask install nimble
-brew cask install fluid
+#brew cask install nimble
+#brew cask install fluid
 brew cask install franz
-brew cask install numi
+#brew cask install numi
 brew cask install vlc
 
 
 # Dev
 # ==============================================================================
 
-brew cask install vagrant-manager
-brew cask install github-desktop
+brew cask install visual-studio-code
+#brew cask install vagrant-manager
+brew cask install sourcetree
 brew cask install imagealpha
 brew cask install imageoptim
 brew cask install virtualbox
-brew cask install sequel-pro
+#brew cask install sequel-pro
+brew cask install transmit
 brew cask install postman
 brew cask install vagrant
 brew cask install iterm2
-brew cask install atom
 
 
 # Quick look plugins

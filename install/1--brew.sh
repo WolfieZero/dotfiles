@@ -38,16 +38,16 @@ brew install tmux
 # Install PHP with MariaDB
 # ==============================================================================
 
-brew install homebrew/dupes/grep
-brew install mariadb
-brew install homebrew/php/php70 --with-mysql --without-apache --with-fpm
-brew install homebrew/php/php70-imagick homebrew/php/php70-mcrypt homebrew/php/php70-xdebug
+#brew install homebrew/dupes/grep
+#brew install mariadb
+#brew install homebrew/php/php70 --with-mysql --without-apache --with-fpm
+#brew install homebrew/php/php70-imagick homebrew/php/php70-mcrypt homebrew/php/php70-xdebug
 
 
 # Post-Install stuffs
 # ==============================================================================
 
-brew services start mariadb
+#brew services start mariadb
 
 
 # Tidy it all up

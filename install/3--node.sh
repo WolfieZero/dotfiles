@@ -8,7 +8,7 @@
 # ==============================================================================
 
 if test ! $(which nvm); then
-    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
+    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
 fi
 
 
@@ -23,6 +23,7 @@ nvm alias default node
 # ==============================================================================
 
 npm install -g npm-check-updates
+npm install -g create-react-app
 npm install -g react-native-cli
 npm install -g browser-sync
 npm install -g npm-cache
