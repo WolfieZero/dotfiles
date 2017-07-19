@@ -5,7 +5,7 @@
 
 syntax enable
 
-"colorscheme atom-dark
+colorscheme onedark
 
 set backspace=indent,eol,start
 set number
