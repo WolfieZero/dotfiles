@@ -20,10 +20,13 @@
     function homestead() {
         case "$1" in
             'edit')
-                vim ~/.homestead/Homestead.yaml
+                vim ~/Homestead/Homestead.yaml
             ;;
             'up')
                 (cd ~/Homestead; vagrant up)
+            ;;
+            'halt')
+                (cd ~/Homestead; vagrant halt)
             ;;
             'reload')
                 (cd ~/Homestead; vagrant reload)
