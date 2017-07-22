@@ -23,6 +23,7 @@ nvm alias default node
 # ==============================================================================
 
 npm install -g npm-check-updates
+npm install -g create-react-app
 npm install -g react-native-cli
 npm install -g browser-sync
 npm install -g npm-cache

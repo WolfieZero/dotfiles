@@ -95,6 +95,7 @@ function! s:h(group, style)
     \ "cterm="   (has_key(a:style, "cterm") ? a:style.cterm    : "NONE")
 endfunction
 
+<<<<<<< HEAD:vim/vim/colors/onedark.vim
 " public {{{
 
 function! onedark#set_highlight(group, style)
@@ -108,6 +109,35 @@ endfunction
 " Color Variables {{{
 
 let s:colors = onedark#GetColors()
+=======
+" public
+
+function! onedark#set_highlight(group, style)
+  call s:h(a:group, a:style)
+endfunction
+
+" /public
+
+" +-----------------+
+" | Color Variables |
+" +-----------------+
+
+let s:red = { "gui": "#E06C75", "cterm": "204", "cterm16": "1" }
+let s:dark_red = { "gui": "#BE5046", "cterm": "196", "cterm16": "9" }
+
+let s:green = { "gui": "#98C379", "cterm": "114", "cterm16": "2" }
+
+let s:yellow = { "gui": "#E5C07B", "cterm": "180", "cterm16": "3" }
+let s:dark_yellow = { "gui": "#D19A66", "cterm": "173", "cterm16": "11" }
+
+let s:blue = { "gui": "#61AFEF", "cterm": "39", "cterm16": "4" }
+
+let s:purple = { "gui": "#C678DD", "cterm": "170", "cterm16": "5" }
+
+let s:cyan = { "gui": "#56B6C2", "cterm": "38", "cterm16": "6" }
+
+let s:white = { "gui": "#ABB2BF", "cterm": "145", "cterm16": "7" }
+>>>>>>> feee56b9a94bdcc7097f9e2cc8f06ea6fef9c006:vim/colors/onedark.vim
 
 let s:red = s:colors.red
 let s:dark_red = s:colors.dark_red
@@ -128,7 +158,17 @@ let s:menu_grey = s:colors.menu_grey
 let s:special_grey = s:colors.special_grey
 let s:vertsplit = s:colors.vertsplit
 
+<<<<<<< HEAD:vim/vim/colors/onedark.vim
 " }}}
+=======
+let s:comment_grey = { "gui": "#5C6370", "cterm": "59", "cterm16": "15" }
+let s:gutter_fg_grey = { "gui": "#636D83", "cterm": "238", "cterm16": "15" }
+let s:cursor_grey = { "gui": "#2C323C", "cterm": "236", "cterm16": "8" }
+let s:visual_grey = { "gui": "#3E4452", "cterm": "237", "cterm16": "15" }
+let s:menu_grey = { "gui": s:visual_grey.gui, "cterm": s:visual_grey.cterm, "cterm16": "8" }
+let s:special_grey = { "gui": "#3B4048", "cterm": "238", "cterm16": "15" }
+let s:vertsplit = { "gui": "#181A1F", "cterm": "59", "cterm16": "15" }
+>>>>>>> feee56b9a94bdcc7097f9e2cc8f06ea6fef9c006:vim/colors/onedark.vim
 
 " Syntax Groups (descriptions and ordering from `:h w18`) {{{
 
@@ -445,10 +485,18 @@ call s:h("xmlAttrib", { "fg": s:dark_yellow })
 call s:h("xmlEndTag", { "fg": s:red })
 call s:h("xmlTag", { "fg": s:red })
 call s:h("xmlTagName", { "fg": s:red })
+<<<<<<< HEAD:vim/vim/colors/onedark.vim
 
 " }}}
 
 " Plugin Highlighting {{{
+=======
+>>>>>>> feee56b9a94bdcc7097f9e2cc8f06ea6fef9c006:vim/colors/onedark.vim
+
+" airblade/vim-gitgutter
+hi link GitGutterAdd    SignifySignAdd
+hi link GitGutterChange SignifySignChange
+hi link GitGutterDelete SignifySignDelete
 
 " airblade/vim-gitgutter
 hi link GitGutterAdd    SignifySignAdd
