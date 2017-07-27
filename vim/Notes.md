@@ -1,40 +1,71 @@
 # Vim
 
-
-## Move Around
-
-k   >>  up
-j   >>  down
-h   >>  left
-l   >>  right
-
-w   >>  move to start of next work
-e   >>  move to end of current or next word
-
-b   >>  move ot start of current or previous word
-ge  >>  move to end of next word
-
-H   >> move to Highest point on screen
-M   >> move to Middle point on screen
-L   >> move to Lowest point on screen
-
-d[number][up/down]  >>  delete [number] of rows in the direction of [up/down] including current line
+- https://scotch.io/tutorials/getting-started-with-vim-an-interactive-guide
 
 
-# Modes
+## Move around file
+
+
+k - up
+j - down
+h - left
+l - right
+
+w - Forward by word
+b - Backward by word
+
+) - Beginning of next sentence
+( - Beginning of current sentence
+
+} - Beginning of next paragraph
+{ - Beginning of current paragraph
+
+] - Beggining of next section
+[ - Begginning of current section
+
+H - Top line of screen
+M - Middle line of screen
+L - Last line of screen
+
+G - Move to bottom of file
+gg - Move to start of file
+[number]+G - Jump to line [number]
+:[number] - Go to line [number]
+
+
+## Deletion
+
+dw - Delete word
+d[number]w - Delete [number] words
+
+d$ - Delete to end of line
+d[number]$ - Delete [number] lines going down
+d[number][up/down] - delete [number] of rows in the direction of [up/down] including current line
+
+
+## Undo
+
+u - Undo
+
+
+## Search
+
+:/[term] - Search a page for [term]
+:?[term] - Search before cursor for [term]
+n - Go to next match
+N - Go to previous match
+,[space] - remove highlighting
+
+:s/[search]/[replace] - Search and replace
+:s/[search]/[replace]/g - Search and replace all
+
+
+## Modes
 
 v  >>  visual
 V  >>  visual line
 e  >>  edit
 i  >>  insert
-
-
-## Commands
-
-:u  >>  undo
-:w  >>  write to files
-:q  >>  quit
-:e  >>  edit
 
 
 ## Copy and Paste
@@ -50,7 +81,6 @@ p   >>  paste current
 /[text]    >>  search within file
 n          >>  goto next occurance in file
 ,[space]   >>  remove highlighting
-:[number]  >>  goto line number 120
 
 
 

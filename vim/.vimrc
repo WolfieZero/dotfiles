@@ -1,18 +1,33 @@
 " ==============================================================================
 " vim config
-" =============================================================================
+" ==============================================================================
 
+set nocompatible
+filetype off
+
+" Vundle
+" ==============================================================================
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+
+" plugins
+Plugin 'joshdick/onedark.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'bling/vim-airline'
+" /plugins
+
+call vundle#end()
+filetype plugin indent on
+
+" Settings
+" ==============================================================================
 
 colorscheme onedark
 
-" You want Vim, not vi. When Vim finds a vimrc, 'nocompatible' is set anyway.
-" We set it explicitely to make our position clear!
-set nocompatible
-
-
-filetype plugin indent on  " Load plugins according to detected filetype.
 syntax on                  " Enable syntax highlighting.
-
 
 set autoindent             " Indent according to previous line.
 set expandtab              " Use spaces instead of tabs.
@@ -65,6 +80,9 @@ nmap <Leader>ev :tabedit $MYVIMRC<cr>
 " Remove search highlights
 nmap <leader><space> :nohlsearch<cr>
 
+" Open NERDTree
+map <C-\> :NERDTreeToggle<CR>
+
 
 " Auto-Command
 " =============================================================================
@@ -72,7 +90,7 @@ nmap <leader><space> :nohlsearch<cr>
 " Reload the .vimrc file when we make changes
 augroup atourcing
     autocmd!
-    autocmd BufWritePost .vimrc source %
+    autocmd BufWritePost $MYVIMRC source $MYVIMRC
 augroup END
 
 
