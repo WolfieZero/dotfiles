@@ -33,6 +33,7 @@ brew install imagemagick
 brew install watchman
 brew install rsync
 brew install tmux
+brew install exa
 
 
 # Install PHP with MariaDB
