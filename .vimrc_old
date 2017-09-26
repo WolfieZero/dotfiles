@@ -2,8 +2,19 @@
 " vim config
 " ==============================================================================
 
-set nocompatible
+
 filetype off
+
+" Space as a Leader
+let mapleader = "\<Space>"
+
+" Use Vim features, not Vi
+set nocompatible
+
+" Use UTF-8 by default
+set encoding=utf-8
+set fileencoding=utf-8
+
 
 " Vundle
 " ==============================================================================
@@ -16,27 +27,72 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'joshdick/onedark.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'bling/vim-airline'
+"Plugin 'bling/vim-airline'
 " /plugins
 
 call vundle#end()
 filetype plugin indent on
 
-" Settings
+
+" Syntax highlighting
 " ==============================================================================
 
+" Detect filetype
+filetype plugin on
+
+" Enable syntax highighting
+syntax enable
+
+" Show matching parens, brackets, etc.
+set showmatch
+
+" 256 colours please
+set t_Co=256
+
+" Colour scheme...
 colorscheme onedark
 
-syntax on                  " Enable syntax highlighting.
+" Italicised comments and attributes
+highlight Comment cterm=italic
+highlight htmlArg cterm=italic
 
-set autoindent             " Indent according to previous line.
-set expandtab              " Use spaces instead of tabs.
-set softtabstop=4          " Tab key indents by 4 spaces.
-set shiftwidth=4           " >> indents by 4 spaces.
-set shiftround             " >> indents to next multiple of 'shiftwidth'.
+" Tell Vim to look in my home directory for more ctags
+set tags+=tags;$HOME
 
-set backspace=indent,eol,start  " Make backspace work as you would expect.
+
+" Text
+" ==============================================================================
+
+filetype plugin indent on
+" 4 spaces please
+set expandtab
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
+" Round indent to nearest multiple of 4
+set shiftround
+" No line-wrapping
+set nowrap
+" Spell-check always on
+set spell
+" Underscores denote words
+set iskeyword-=_
+" No extra spaces when joining lines
+set nojoinspaces
+" Interpret numbers with leading zeroes as decimal, not octal
+set nrformats-=octal
+" Auto-format comments
+set formatoptions+=jroqn1
+
+syntax on
+set autoindent
+set expandtab
+set softtabstop=4
+set shiftwidth=4
+set shiftround
+set backspace=indent,eol,start
 set number
+
 set hidden                 " Switch between buffers without having to save first.
 set laststatus=2           " Always show statusline.
 set display=lastline       " Show as much as possible of the last line.
@@ -55,11 +111,11 @@ set wrapscan               " Searches wrap around end-of-file.
 set report=0               " Always report changed lines.
 set synmaxcol=200          " Only highlight the first 200 columns.
 
-" GUI Vim line-height
-set linespace=15
+set scrolloff=3
+set sidescrolloff=5
 
-" Change `<Leader>` to `,`
-let mapleader = ','
+" GUI Vim line-height
+"set linespace=15
 
 "set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
 

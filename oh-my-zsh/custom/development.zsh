@@ -22,13 +22,13 @@
             'edit')
                 vim ~/Homestead/Homestead.yaml
             ;;
-            'up')
+            'start')
                 (cd ~/Homestead; vagrant up)
             ;;
-            'halt')
+            'stop')
                 (cd ~/Homestead; vagrant halt)
             ;;
-            'reload')
+            'restart')
                 (cd ~/Homestead; vagrant reload)
             ;;
             'provision')
@@ -70,10 +70,10 @@
                 php -S localhost:1337
             ;;
             'proxy')
-                browser-sync start --no-notify --no-inject-changes --no-ghost-mode --no-open --proxy $1
+                npx browser-sync start --no-notify --no-inject-changes --no-ghost-mode --no-open --proxy $1
             ;;
             'local')
-                browser-sync start --server --files '**/*.*' --no-notify --no-open
+                npx browser-sync start --server --files '**/*.*' --no-notify --no-open
             ;;
             *)
                 echo 'php                 -  start PHP localhost:1337 in local directory';
