@@ -22,15 +22,14 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 brew cask install the-unarchiver
 brew cask install appcleaner
 brew cask install cheatsheet
+brew cask install 1password
 brew cask install ubersicht
-#brew cask install caffeine
 brew cask install skyfonts
-#brew cask install dropbox
+brew cask install dropbox
 brew cask install macdown
-#brew cask install nimble
-#brew cask install fluid
 brew cask install franz
-#brew cask install numi
+brew cask install slack
+brew cask install numi
 brew cask install vlc
 
 
