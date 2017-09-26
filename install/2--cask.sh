@@ -27,6 +27,7 @@ brew cask install ubersicht
 brew cask install skyfonts
 brew cask install dropbox
 brew cask install macdown
+brew cask install spotify
 brew cask install franz
 brew cask install slack
 brew cask install numi
