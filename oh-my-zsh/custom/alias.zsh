@@ -22,6 +22,7 @@
 # ==============================================================================
 
 
+    alias l="exa -bghHlia --git"
     alias box="~/Dropbox"
     alias codebox="~/Dropbox/Code"
 
