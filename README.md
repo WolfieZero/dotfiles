@@ -28,7 +28,7 @@ bash ~/dotfiles/install/1--brew.sh
 bash ~/dotfiles/install/2--cask.sh
 bash ~/dotfiles/install/3--node.sh
 bash ~/dotfiles/install/4--ruby.sh
-bash ~/dotfiles/install/5--composer.sh
+bash ~/dotfiles/install/5--php.sh
 bash ~/dotfiles/install/6--osx.sh
 bash ~/dotfiles/install/7--powerlinefonts.sh
 bash ~/dotfiles/install/8--symlinks.sh
