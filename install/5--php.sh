@@ -17,11 +17,25 @@ mv composer.phar /usr/local/bin/composer
 # composer global require hirak/prestissimo
 
 
-# All the rest
+# Install PHP 7.1 locally
 # ==============================================================================
 
-composer global require "squizlabs/php_codesniffer=*"
+ brew install homebrew/php/php71
+
+
+# Composer packages
+# ==============================================================================
+
 composer global require friendsofphp/php-cs-fixer
 composer global require laravel/installer
 composer global require laravel/valet
+
+
+# Setup Valet / localhost env
+# ==============================================================================
+# https://laravel.com/docs/valet
+
 valet install
+valet domain localhost
+brew install mysql
+brew services start mysql
