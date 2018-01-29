@@ -8,7 +8,7 @@
 
 
     alias v="vim"
-    alias e="atom"
+    alias e="code"
 
 
 # Tor Connection
