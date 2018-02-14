@@ -21,6 +21,18 @@ mv composer.phar /usr/local/bin/composer
 # ==============================================================================
 
  brew install homebrew/php/php71
+ brew install php71-xdebug php71-opcache
+
+# FOR XDEBUG
+# Run `php --ini` and check for the file
+# - /usr/local/etc/php/7.1/conf.d/ext-xdebug.ini
+# Add the following to that file
+# ```
+# xdebug.remote_enable=true
+# xdebug.remote_host=localhost
+# xdebug.remote_port=9000
+# xdebug.remote_handler=dbgp
+# ```
 
 
 # Composer packages
