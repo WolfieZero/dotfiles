@@ -47,7 +47,7 @@ brew cask install virtualbox
 brew cask install transmit
 brew cask install postman
 brew cask install vagrant
-brew cask install iterm2
+brew cask install hyper
 
 
 # Quick look plugins
