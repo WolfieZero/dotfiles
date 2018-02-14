@@ -55,10 +55,30 @@
 # Symfony
 # ==============================================================================
 
+    function symfony() {
+        case $1 in
+            'new')
+                (composer create-project symfony/skeleton $1)
+            ;;
+            'new3')
+                (composer create-project symfony/framework-standard-edition $2 "3.*.*")
+            ;;
+            'serve')
+                (./bin/console server:run)
+            ;;
+            'console')
+                (./bin/console $2)
+            ;;
+            *)
+                echo 'new {name}           -  new Symfony 4 app';
+                echo 'new3 {name}          -  new Symfony 3 app';
+                echo 'serve                -  runs built in server';
+                echo 'console "{command}"  -  vagrant reload --provision';
+            ;;
+        esac
+    }
 
-    alias symf-create="composer create-project symfony/skeleton $1"
-    alias symf-serve="php bin/console server:run"
-    alias symsole="php bin/console"
+    alias console-bin="./bin/console"
 
 
 # Python
