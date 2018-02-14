@@ -57,8 +57,8 @@
 
 
     alias symf-create="composer create-project symfony/skeleton $1"
-    alias symf-console="php bin/console"
     alias symf-serve="php bin/console server:run"
+    alias symsole="php bin/console"
 
 
 # Python
