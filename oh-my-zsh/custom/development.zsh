@@ -20,7 +20,7 @@
     function homestead() {
         case "$1" in
             'edit')
-                vim ~/Homestead/Homestead.yaml
+                e ~/Homestead/Homestead.yaml
             ;;
             'start')
                 (cd ~/Homestead; vagrant up)
@@ -42,8 +42,8 @@
             ;;
             *)
                 echo 'edit       -  opens Homestead.yaml in Vim';
-                echo 'up         -  vagrant up';
-                echo 'reload     -  vagrant reload';
+                echo 'start      -  vagrant up';
+                echo 'restart    -  vagrant reload';
                 echo 'provision  -  vagrant reload --provision';
                 echo 'ssh        -  ssh into homestead';
                 echo 'update     -  updates the homestead box';
@@ -99,7 +99,7 @@
                 php -S localhost:1337
             ;;
             'proxy')
-                npx browser-sync start --no-notify --no-inject-changes --no-ghost-mode --no-open --proxy $1
+                npx browser-sync start --no-notify --no-inject-changes --no-ghost-mode --no-open --proxy $2
             ;;
             'local')
                 npx browser-sync start --server --files '**/*.*' --no-notify --no-open
