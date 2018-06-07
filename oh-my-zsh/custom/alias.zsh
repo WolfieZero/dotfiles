@@ -56,3 +56,10 @@
 
     alias top="htop"
     alias top-original-="/usr/bin/top"
+
+
+# Other
+# ==============================================================================
+
+
+    alias bu="brew update && brew upgrade && brew cleanup"
