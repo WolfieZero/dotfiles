@@ -9,6 +9,7 @@
 
     alias v="vim"
     alias e="code"
+    alias help="cht.sh"
 
 
 # Tor Connection
@@ -63,3 +64,4 @@
 
 
     alias bu="brew update && brew upgrade && brew cleanup"
+    alias wttr='curl http://wttr.in/romsey,uk'

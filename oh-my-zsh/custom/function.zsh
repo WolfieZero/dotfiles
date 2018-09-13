@@ -11,6 +11,8 @@
         echo 'Fixing ssh permissions'
         sudo chmod 600 ~/.ssh/*
         sudo chmod 755 ~/.ssh
+        sudo chmod 755 ~/.ssh/keys
+        sudo chmod 600 ~/.ssh/keys/*
     }
 
 
