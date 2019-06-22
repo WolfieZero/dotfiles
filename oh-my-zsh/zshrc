@@ -71,3 +71,49 @@ export PATH="$HOME/.yarn/bin:$PATH"
 
 # Dotfile bin folder
 export PATH="$HOME/dotfiles/bin:$PATH"
+
+# NVM stuff
+export NVM_DIR="$HOME/.nvm"
+  . "/usr/local/opt/nvm/nvm.sh"
+
+# auto init `nvm use`
+autoload -U add-zsh-hook
+load-nvmrc() {
+  local node_version="$(nvm version)"
+  local nvmrc_path="$(nvm_find_nvmrc)"
+
+  if [ -n "$nvmrc_path" ]; then
+    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+
+    if [ "$nvmrc_node_version" = "N/A" ]; then
+      nvm install
+    elif [ "$nvmrc_node_version" != "$node_version" ]; then
+      nvm use
+    fi
+  elif [ "$node_version" != "$(nvm version default)" ]; then
+    echo "Reverting to nvm default version"
+    nvm use default
+  fi
+}
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/neil/Dropbox/Dootrix/Code/verso-server/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/neil/Dropbox/Dootrix/Code/verso-server/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/neil/Dropbox/Dootrix/Code/verso-server/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/neil/Dropbox/Dootrix/Code/verso-server/node_modules/tabtab/.completions/sls.zsh
+
+# sqlite3
+export PATH="/usr/local/opt/sqlite/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/sqlite/lib"
+export CPPFLAGS="-I/usr/local/opt/sqlite/include"
+export PKG_CONFIG_PATH="/usr/local/opt/sqlite/lib/pkgconfig"
+
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f /Users/neil/Dropbox/Dootrix/Code/keetrix/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/neil/Dropbox/Dootrix/Code/keetrix/node_modules/tabtab/.completions/slss.zsh
+# tabtab source for electron-forge package
+# uninstall by removing these lines or running `tabtab uninstall electron-forge`
+[[ -f /Users/neil/Dropbox/Code/reminders-menu-bar/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /Users/neil/Dropbox/Code/reminders-menu-bar/node_modules/tabtab/.completions/electron-forge.zsh

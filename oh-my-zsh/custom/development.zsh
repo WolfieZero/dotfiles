@@ -3,6 +3,29 @@
 # ==============================================================================
 
 
+# iOS devices
+# ==============================================================================
+
+    # https://www.npmjs.com/package/ios-sim
+
+    alias device-show-all="npx ios-sim showdevicetypes"
+
+    alias device-iPhone6="npx ios-sim start --devicetypeid com.apple.CoreSimulator.SimDeviceType.iPhone-6"
+    alias device-iPhone6-plus="npx ios-sim start --devicetypeid com.apple.CoreSimulator.SimDeviceType.iPhone-6-Plus"
+
+    alias device-iPhone7="npx ios-sim start --devicetypeid com.apple.CoreSimulator.SimDeviceType.iPhone-7"
+    alias device-iPhone7-plus="npx ios-sim start --devicetypeid com.apple.CoreSimulator.SimDeviceType.iPhone-7-Plus"
+
+    alias device-iPhoneXr="npx ios-sim start --devicetypeid com.apple.CoreSimulator.SimDeviceType.iPhone-XR"
+
+
+# Node
+# ==============================================================================
+
+
+    alias ncu="npx npm-check-updates"
+
+
 # Laravel
 # ==============================================================================
 
@@ -113,3 +136,15 @@
     }
 
     alias serve="browser-sync start --server --files '**/*.*' --no-notify --no-open"
+
+
+# Git
+# ==============================================================================
+
+
+    function gfp() {
+        echo "Git force pull"
+        git fetch --all
+        git reset --hard origin/master
+        git pull $1
+    }

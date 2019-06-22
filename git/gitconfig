@@ -1,6 +1,6 @@
 # gitconfig
 [user]
-    name = WolfieZero
+    name = Neil Sweeney
     email = neil@wolfiezero.com
 [github]
     user = WolfieZero
@@ -119,7 +119,8 @@
     # do not warn about missing whitespace at EOF
     whitespace = nowarn
 [core]
-    excludesfile = ~/.gitignore_global
+	autocrlf = input
+    excludesfile = ~/.gitignore
     pager = less -FXRS -x2
     editor = vim
 [rerere]

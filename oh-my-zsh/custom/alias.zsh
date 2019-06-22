@@ -9,7 +9,6 @@
 
     alias v="vim"
     alias e="code"
-    alias help="cht.sh"
 
 
 # Tor Connection
@@ -26,14 +25,7 @@
     alias l="exa -bghHlia --git"
     alias box="~/Dropbox"
     alias codebox="~/Dropbox/Code"
-
-    alias apps="~/Dropbox/Code/App"
-    alias webs="~/Dropbox/Code/Web"
-    alias boom="~/Dropbox/Code/Boom"
-    alias tool="~/Dropbox/Code/Tools"
-
-    alias web=webs
-    alias tools=tool
+    alias projects="~/Dropbox/Projects"
 
 
 # Deletion
@@ -63,5 +55,15 @@
 # ==============================================================================
 
 
+    alias help="cht.sh"
     alias bu="brew update && brew upgrade && brew cleanup"
-    alias wttr='curl http://wttr.in/romsey,uk'
+    alias weather='curl http://wttr.in/romsey,uk'
+    alias hosts="code /etc/hosts"
+    alias add-dock-split="defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type=\"spacer-tile\";}' && killall Dock"
+
+
+# Git
+# ==============================================================================
+
+
+    alias git-leaderboard="git shortlog -sn --all --no-merges"
