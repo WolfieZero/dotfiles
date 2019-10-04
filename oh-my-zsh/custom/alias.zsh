@@ -33,6 +33,7 @@
 
     alias del="rm -rf $1"
     alias delete=del
+    alias del-node-modules="find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +"
 
 
 # Compress
