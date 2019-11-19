@@ -3,8 +3,8 @@
 # ==============================================================================
 
 
-# iOS devices
 # ==============================================================================
+# iOS devices
 
     # https://www.npmjs.com/package/ios-sim
 
@@ -19,15 +19,16 @@
     alias device-iPhoneXr="npx ios-sim start --devicetypeid com.apple.CoreSimulator.SimDeviceType.iPhone-XR"
 
 
-# Node
 # ==============================================================================
+# Node
 
 
     alias ncu="npx npm-check-updates"
+    alias npr="npm run"
 
 
-# Laravel
 # ==============================================================================
+# Laravel
 
 
     # Aliases
@@ -75,8 +76,8 @@
     }
 
 
-# Symfony
 # ==============================================================================
+# Symfony
 
     function symfony() {
         case $1 in
@@ -104,16 +105,16 @@
     alias console-bin="./bin/console"
 
 
-# Python
 # ==============================================================================
+# Python
 
 
     alias startenv="source env/bin/activate"
     alias stopenv="deactivate"
 
 
-# Server
 # ==============================================================================
+# Server
 
 
     function server() {
@@ -138,8 +139,8 @@
     alias serve="browser-sync start --server --files '**/*.*' --no-notify --no-open"
 
 
-# Git
 # ==============================================================================
+# Git
 
 
     function gfp() {

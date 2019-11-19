@@ -3,57 +3,57 @@
 # ==============================================================================
 
 
-# Editors
 # ==============================================================================
+# Editors
 
 
     alias v="vim"
     alias e="code"
 
 
-# Tor Connection
 # ==============================================================================
+# Tor Connection
 
 
     alias torme="bash ~/dotfiles/torme.sh"
 
 
-# Folder Shortcuts
 # ==============================================================================
+# Folder Shortcuts
 
 
     alias l="exa -bghHlia --git"
     alias box="~/Dropbox"
-    alias codebox="~/Dropbox/Code"
-    alias projects="~/Dropbox/Projects"
+    alias codebox="~/Code"
+    alias projects="~/Projects"
 
 
-# Deletion
 # ==============================================================================
+# Deletion
 
     alias del="rm -rf $1"
     alias delete=del
     alias del-node-modules="find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +"
 
 
-# Compress
 # ==============================================================================
+# Compress
 
 
     alias zip='tar -jcvf $1 $2' # zip to-file.tar this-folder
     alias unzip='tar -jxvf $1'  # unzip this-file.tar
 
 
-# Processes
 # ==============================================================================
+# Processes
 
 
     alias top="htop"
     alias top-original-="/usr/bin/top"
 
 
-# Other
 # ==============================================================================
+# Other
 
 
     alias help="cht.sh"
@@ -63,8 +63,8 @@
     alias add-dock-split="defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type=\"spacer-tile\";}' && killall Dock"
 
 
-# Git
 # ==============================================================================
+# Git
 
 
     alias git-leaderboard="git shortlog -sn --all --no-merges"
