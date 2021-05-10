@@ -1,31 +1,39 @@
 # Dotfiles
 
-
 ## Initial Setup and Installation
 
-If on OSX, you will need to install the XCode CLI tools before continuing. To do so, open a terminal and type
+To get started...
 
 ```bash
 xcode-select --install
 sudo xcodebuild -license
 ```
 
-### Install Mac Brew and Git
+### Setup new Mac
 
 ```bash
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew update
+brew upgrade
 brew install git
+brew cleanup
 cd && git clone https://github.com/WolfieZero/dotfiles.git
 ```
-
-### Install Everything Else
 
 Once done you can run the following (best to do one-by-one):
 
 ```bash
-bash ~/dotfiles/install/0--ohmyzsh.sh
-bash ~/dotfiles/install/1--brew.sh
-bash ~/dotfiles/install/2--cask.sh
+bash ~/dotfiles/setup-new-mac/setup-ohmyzsh.sh
+bash ~/dotfiles/setup-new-mac/install-cli-tools.sh
+bash ~/dotfiles/setup-new-mac/macos-improvements.sh
+
+bash ~/dotfiles/setup-new-mac/install-apps.sh
+bash ~/dotfiles/setup-new-mac/install-browsers.sh
+
+bash ~/dotfiles/setup-new-mac/install-dev-tools.sh
+
+bash ~/dotfiles/setup-new-mac/setup-vim.sh
+
 bash ~/dotfiles/install/3--node.sh
 bash ~/dotfiles/install/4--ruby.sh
 bash ~/dotfiles/install/5--php.sh
