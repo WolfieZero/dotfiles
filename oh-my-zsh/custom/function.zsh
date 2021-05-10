@@ -16,6 +16,33 @@
     }
 
 
+# Fix Git config
+# ==============================================================================
+
+
+    function fix-git() {
+        echo 'Fixing git config'
+        git config user.name "Neil Sweeney"
+        git config user.email "neil@wolfiezero.com"
+    }
+
+
+# Fix Bluetooth?
+# ==============================================================================
+
+
+    function fix-bluetooth() {
+        defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Max (editable)" 80
+        defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" 80
+        defaults write com.apple.BluetoothAudioAgent "Apple Initial Bitpool (editable)" 80
+        defaults write com.apple.BluetoothAudioAgent "Apple Initial Bitpool Min (editable)" 80
+        defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool" 80
+        defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool Max" 80
+        defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool Min" 80
+        sudo killall bluetoothaudiod
+    }
+
+
 # Dotfiles
 # ==============================================================================
 
