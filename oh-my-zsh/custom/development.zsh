@@ -10,13 +10,19 @@
 
     alias device-show-all="npx ios-sim showdevicetypes"
 
-    alias device-iPhone6="npx ios-sim start --devicetypeid com.apple.CoreSimulator.SimDeviceType.iPhone-6"
-    alias device-iPhone6-plus="npx ios-sim start --devicetypeid com.apple.CoreSimulator.SimDeviceType.iPhone-6-Plus"
+    alias device-iPhone8="npx ios-sim start --devicetypeid com.apple.CoreSimulator.SimDeviceType.iPhone-8"
+    alias device-iPhone8-plus="npx ios-sim start --devicetypeid com.apple.CoreSimulator.SimDeviceType.iPhone-8-Plus"
 
-    alias device-iPhone7="npx ios-sim start --devicetypeid com.apple.CoreSimulator.SimDeviceType.iPhone-7"
-    alias device-iPhone7-plus="npx ios-sim start --devicetypeid com.apple.CoreSimulator.SimDeviceType.iPhone-7-Plus"
+    alias device-iPhone11="npx ios-sim start --devicetypeid com.apple.CoreSimulator.SimDeviceType.iPhone-11"
+    alias device-iPhone11-Pro="npx ios-sim start --devicetypeid com.apple.CoreSimulator.SimDeviceType.iPhone-11-Pro"
+    alias device-iPhone-11-Pro-Max="npx ios-sim start --devicetypeid com.apple.CoreSimulator.SimDeviceType.iPhone-11-Pro-Max"
 
-    alias device-iPhoneXr="npx ios-sim start --devicetypeid com.apple.CoreSimulator.SimDeviceType.iPhone-XR"
+
+# ==============================================================================
+# Git
+
+    alias git--ignore="npx goops"
+    alias git--degit="npx degit $1"
 
 
 # ==============================================================================
@@ -25,6 +31,7 @@
 
     alias ncu="npx npm-check-updates"
     alias npr="npm run"
+    alias nnp="del node_modules; del package-lock.json"
 
 
 # ==============================================================================
