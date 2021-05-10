@@ -42,6 +42,9 @@ export PATH="$PATH:./vendor/bin"
 export PATH="$PATH:$HOME/.npm-packages/bin"
 export PATH="$PATH:./node_modules/.bin"
 
+# Flutter
+export PATH="$PATH:$HOME/flutter/bin"
+
 # Homebrew casks
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
