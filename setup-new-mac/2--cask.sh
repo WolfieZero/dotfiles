@@ -1,37 +1,13 @@
 #!/usr/bin/env bash
-# ==============================================================================
-# Install apps via Cask
-# ==============================================================================
-
-
-# Install native apps
-# ==============================================================================
-
-brew tap caskroom/cask
-
-
-# Set install into Applications directory
-# ==============================================================================
-
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-
 
 # Personal
-# ==============================================================================
-
-brew cask install the-unarchiver
+bci the-unarchiver
 brew cask install appcleaner
-brew cask install cheatsheet
 brew cask install 1password
-brew cask install ubersicht
-brew cask install skyfonts
 brew cask install dropbox
 brew cask install macdown
 brew cask install spotify
-brew cask install franz
 brew cask install slack
-brew cask install numi
-brew cask install vlc
 
 
 # Dev

@@ -1,15 +1,20 @@
 #!/usr/bin/env sh
-# ==============================================================================
+
 # OSX defaults
 # ==============================================================================
 
+# Quick look plugins
+
+brew cask install 'quicklook-json'
+brew cask install 'qlmarkdown'
+brew cask install 'quicklook-csv'
+brew cask install 'betterzipql'
 
 # Ask for password
 sudo -v
 
-
 # General UI/UX
-# ==============================================================================
+# ------------------------------------------------------------------------------
 
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
@@ -41,17 +46,15 @@ defaults write NSGlobalDomain KeyRepeat -int 2
 # Set a shorter Delay until key repeat
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
-
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input
-# ==============================================================================
+# ------------------------------------------------------------------------------
 
 # Enable full keyboard access for all controls
 # (e.g. enable Tab in modal dialogs)
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
-
 # Finder
-# ==============================================================================
+# ------------------------------------------------------------------------------
 
 # Finder: allow text selection in Quick Look
 defaults write com.apple.finder QLEnableTextSelection -bool true
@@ -80,15 +83,13 @@ defaults write com.apple.finder ShowStatusBar -bool true
 # Show the ~/Library folder
 chflags nohidden ~/Library
 
-
 # Safari
-# ==============================================================================
+# ------------------------------------------------------------------------------
 
 # Enable Safari’s debug menu
 defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
 
-
 # Restart
-# ==============================================================================
+# ------------------------------------------------------------------------------
 
 for app in Safari Finder Dock SystemUIServer; do killall "$app" >/dev/null 2>&1; done
