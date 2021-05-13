@@ -1,14 +1,13 @@
-#  ln -s ~/Dropbox\ \(Personal\) ~/Dropbox
-## delete existing file to Dropbox
-#  rm -rf ~/.zshrc
-## symlink file back to your local directory
-#  ln -s ${HOME}/Dropbox/Apps/ohmyzsh/zshrc ${HOME}/.zshrc
-
 # Path to your oh-my-zsh installation.
+# ------------------------------------------------------------------------------
+
 export DOTFILES=${HOME}/dotfiles
+export FUNCTIONS=${DOTFILES}/oh-my-zsh/functions
 export ZSH=${HOME}/.oh-my-zsh
 
 # Set name of the theme to load.
+# ------------------------------------------------------------------------------
+
 ZSH_THEME="boom"
 
 if [ -e /usr/share/terminfo/x/xterm-256color ]; then
@@ -18,105 +17,86 @@ else
 fi
 
 # Would you like to use another custom folder than $ZSH/custom?
+# ------------------------------------------------------------------------------
+
 ZSH_CUSTOM=${DOTFILES}/oh-my-zsh/custom
 
 # Additional private configs
-for config_file (${HOME}/Library/Mobile\ Documents/com\~apple\~CloudDocs/System/oh-my-zsh//*.zsh(N)); do
-  source $config_file
-done
+# ------------------------------------------------------------------------------
+
+# for config_file (${HOME}/.secret-zsh/*.zsh(N)); do
+#   source $config_file
+# done
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# ------------------------------------------------------------------------------
 # Custom plugins may be added to ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+
 plugins=(zsh-syntax-highlighting)
 
+# set color scheme
+# ------------------------------------------------------------------------------
+
+export CLICOLOR=1
+export TERM=xterm-256color
+
+source $ZSH/oh-my-zsh.sh
+
+# Completion
+# ------------------------------------------------------------------------------
+
+autoload bashcompinit
+bashcompinit
+source $DOTFILES/wp-completion.bash
+
+eval $(/usr/libexec/path_helper -s)
+
 # User configuration
+# ------------------------------------------------------------------------------
+
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$PATH"
 
 # Composer
+# ------------------------------------------------------------------------------
+
 export PATH="$PATH:$HOME/.composer/vendor/bin"
 export PATH="$PATH:./vendor/bin"
 
 # Node
+# ------------------------------------------------------------------------------
+
 export PATH="$PATH:$HOME/.npm-packages/bin"
 export PATH="$PATH:./node_modules/.bin"
 
 # Flutter
+# ------------------------------------------------------------------------------
+
 export PATH="$PATH:$HOME/flutter/bin"
 
-# Homebrew casks
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-
-# set color scheme
-export CLICOLOR=1
-export TERM=xterm-256color
-
-# Android
-export ANDROID_HOME=${HOME}/Library/Android/sdk
-export PATH=${PATH}:${ANDROID_HOME}/tools
-export PATH=${PATH}:${ANDROID_HOME}/platform-tools
-
-source $ZSH/oh-my-zsh.sh
-
-autoload bashcompinit
-bashcompinit
-source $HOME/dotfiles/wp-completion.bash
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
-eval $(/usr/libexec/path_helper -s)
+# Yarn
+# ------------------------------------------------------------------------------
 
 export PATH="$HOME/.yarn/bin:$PATH"
 
 # Dotfile bin folder
+# ------------------------------------------------------------------------------
+
 export PATH="$HOME/dotfiles/bin:$PATH"
 
-# NVM stuff
-export NVM_DIR="$HOME/.nvm"
-  . "/usr/local/opt/nvm/nvm.sh"
-
-# auto init `nvm use`
-autoload -U add-zsh-hook
-load-nvmrc() {
-  local node_version="$(nvm version)"
-  local nvmrc_path="$(nvm_find_nvmrc)"
-
-  if [ -n "$nvmrc_path" ]; then
-    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
-
-    if [ "$nvmrc_node_version" = "N/A" ]; then
-      nvm install
-    elif [ "$nvmrc_node_version" != "$node_version" ]; then
-      nvm use
-    fi
-  elif [ "$node_version" != "$(nvm version default)" ]; then
-    echo "Reverting to nvm default version"
-    nvm use default
-  fi
-}
-add-zsh-hook chpwd load-nvmrc
-load-nvmrc
-
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /Users/neil/Dropbox/Dootrix/Code/verso-server/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/neil/Dropbox/Dootrix/Code/verso-server/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /Users/neil/Dropbox/Dootrix/Code/verso-server/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/neil/Dropbox/Dootrix/Code/verso-server/node_modules/tabtab/.completions/sls.zsh
-
 # sqlite3
+# ------------------------------------------------------------------------------
+
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/sqlite/lib"
 export CPPFLAGS="-I/usr/local/opt/sqlite/include"
 export PKG_CONFIG_PATH="/usr/local/opt/sqlite/lib/pkgconfig"
 
-# tabtab source for slss package
-# uninstall by removing these lines or running `tabtab uninstall slss`
-[[ -f /Users/neil/Dropbox/Dootrix/Code/keetrix/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/neil/Dropbox/Dootrix/Code/keetrix/node_modules/tabtab/.completions/slss.zsh
-# tabtab source for electron-forge package
-# uninstall by removing these lines or running `tabtab uninstall electron-forge`
-[[ -f /Users/neil/Dropbox/Code/reminders-menu-bar/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /Users/neil/Dropbox/Code/reminders-menu-bar/node_modules/tabtab/.completions/electron-forge.zsh
+# PHP
+# ------------------------------------------------------------------------------
+
+export PATH="/usr/local/opt/php@7.4/bin:$PATH"
+export PATH="/usr/local/opt/php@7.4/sbin:$PATH"
+
+# --------------- After this list it's been added automatically ---------------
