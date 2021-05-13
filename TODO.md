@@ -1,5 +1,0 @@
-- look at tmux configs
-- symlink
-    - gitconfigs
-    - jshint
-    - jsc
