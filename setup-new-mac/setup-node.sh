@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
-# Setup Dev - Node
-# ==============================================================================
+# Setup Node
+# ------------------------------------------------------------------------------
 
-sh ./_config.sh
+# Install NVM
+brew install nvm
 
+# Install LTS version of Node
+nvm install --lts
 
-cli=(
-  nvm
-)
-
-brew_multiple "${cli[@]}"
+# Set it as default
+nvm alias default node

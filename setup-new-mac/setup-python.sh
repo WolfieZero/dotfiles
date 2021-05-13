@@ -1,11 +1,7 @@
 #!/usr/bin/env bash
 
-# Install CLI Tools
+# Python
 # ------------------------------------------------------------------------------
 
-sh ./_config.sh
-
-tools=(
-  imagemagick
-  exa
-)
+brew install python
+pip install --upgrade pip setuptools

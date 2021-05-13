@@ -3,13 +3,6 @@
 # OSX defaults
 # ==============================================================================
 
-# Quick look plugins
-
-brew cask install 'quicklook-json'
-brew cask install 'qlmarkdown'
-brew cask install 'quicklook-csv'
-brew cask install 'betterzipql'
-
 # Ask for password
 sudo -v
 

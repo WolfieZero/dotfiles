@@ -1,15 +1,18 @@
 #!/usr/bin/env bash
 
-# Setup Dev - General
-# ==============================================================================
+# Install Dev Tools
+# ------------------------------------------------------------------------------
 
 sh ./_config.sh
 
 apps=(
-  visual-studio-code
-  postman
-  iterm2
-  fork
+  cyberduck           # ftp tool
+  docker              # development environments
+  fork                # git mananger
+  integrity           # website link checker
+  runjs               # js tool
+  postman             # api tool
+  visual-studio-code  # code editor
 )
 
 brew_install_multiple "${apps[@]}"
