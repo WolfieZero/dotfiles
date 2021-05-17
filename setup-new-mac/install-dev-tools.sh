@@ -3,7 +3,7 @@
 # Install Dev Tools
 # ------------------------------------------------------------------------------
 
-sh ./_config.sh
+source ~/dotfiles/setup-new-mac/_config.sh
 
 apps=(
   cyberduck           # ftp tool

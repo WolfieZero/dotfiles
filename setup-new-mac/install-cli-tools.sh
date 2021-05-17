@@ -3,7 +3,7 @@
 # Install CLI Tools
 # ------------------------------------------------------------------------------
 
-sh ./_config.sh
+source ~/dotfiles/setup-new-mac/_config.sh
 
 tools=(
   imagemagick

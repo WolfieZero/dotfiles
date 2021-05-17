@@ -3,11 +3,11 @@
 # Symlinks
 # ------------------------------------------------------------------------------
 
-rm -f ~/.ssh
+# rm -rf ~/.ssh
 ln -s ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/System/ssh ~/.ssh
 
-rm -f ~/.gitconfig
+# rm -rf ~/.gitconfig
 ln -s ~/dotfiles/git/gitconfig ~/.gitconfig
 
-rm -f ~/.gitignore
+# rm -rf ~/.gitignore
 ln -s ~/dotfiles/git/gitignore ~/.gitignore

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-sh ./_config.sh
+source ~/dotfiles/setup-new-mac/_config.sh
 
 apps=(
   qlcolorcode     # Preview source code files with syntax highlighting

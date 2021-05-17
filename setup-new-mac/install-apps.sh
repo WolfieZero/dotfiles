@@ -3,7 +3,7 @@
 # Install Apps
 # ------------------------------------------------------------------------------
 
-sh ./_config.sh
+source ~/dotfiles/setup-new-mac/_config.sh
 
 apps=(
   appcleaner          # removes apps
