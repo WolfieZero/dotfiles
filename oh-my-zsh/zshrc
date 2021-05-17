@@ -47,11 +47,11 @@ source $ZSH/oh-my-zsh.sh
 # Completion
 # ------------------------------------------------------------------------------
 
-autoload bashcompinit
-bashcompinit
-source $DOTFILES/wp-completion.bash
+# autoload bashcompinit
+# bashcompinit
+# source $DOTFILES/wp-completion.bash
 
-eval $(/usr/libexec/path_helper -s)
+# eval $(/usr/libexec/path_helper -s)
 
 # User configuration
 # ------------------------------------------------------------------------------
