@@ -11,6 +11,7 @@ apps=(
   imagealpha          # optimise transparent pngs
   imageoptim          # images
   iterm2              # terminal
+  keepingyouawake     # disable screen sleep
   keka                # file archiver
   notion              # note app
   numi                # verbose calculator
