@@ -107,16 +107,15 @@ export PATH="/usr/local/opt/php@7.4/sbin:$PATH"
 # autoload `nvm use`
 # ------------------------------------------------------------------------------
 
-export NVM_DIR="$HOME/.nvm"
-  . "/usr/local/opt/nvm/nvm.sh"
+if test -f "/usr/local/opt/nvm/nvm.sh"; then
+  export NVM_DIR="$HOME/.nvm"
+    . "/usr/local/opt/nvm/nvm.sh"
 
-autoload -U add-zsh-hook
+  autoload -U add-zsh-hook
 
-load-nvmrc() {
-  local node_version="$(nvm version)"
-  local nvmrc_path="$(nvm_find_nvmrc)"
-
-  if command -v nvm &> /dev/null; then
+  load-nvmrc() {
+    local node_version="$(nvm version)"
+    local nvmrc_path="$(nvm_find_nvmrc)"
     if [ -n "$nvmrc_path" ]; then
       local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
 
@@ -129,11 +128,11 @@ load-nvmrc() {
       echo "Reverting to nvm default version"
       nvm use default
     fi
-  fi
-}
+  }
 
-add-zsh-hook chpwd load-nvmrc
-load-nvmrc
+  add-zsh-hook chpwd load-nvmrc
+  load-nvmrc
 
+fi
 
 # --------------- After this list it's been added automatically ---------------
