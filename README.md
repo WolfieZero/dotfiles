@@ -2,20 +2,18 @@
 
 ## Initial Setup and Installation
 
-To get started...
+To get started setup xcode on the mac
 
 ```bash
 xcode-select --install
-sudo xcodebuild -license
 ```
 
-## Setup new Mac
+Now setup the basic environment required
 
 ```bash
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew update
-brew upgrade
-brew install git
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew install wget
+brew install zsh
 brew cleanup
 cd && git clone https://github.com/WolfieZero/dotfiles.git
 bash ~/dotfiles/setup-new-mac/setup-ohmyzsh.sh
