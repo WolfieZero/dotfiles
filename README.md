@@ -16,17 +16,18 @@ brew install wget
 brew install zsh
 brew cleanup
 cd && git clone https://github.com/WolfieZero/dotfiles.git
+sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 bash ~/dotfiles/setup-new-mac/setup-ohmyzsh.sh
+bash ~/dotfiles/setup-new-mac/make-symlinks.sh
+bash ~/dotfiles/setup-new-mac/install-cli-tools.sh
+bash ~/dotfiles/setup-new-mac/install-quick-look-plugins.sh
+bash ~/dotfiles/setup-new-mac/macos-improvements.sh
 ```
 
-Once done you can run the following (best to do one-by-one):
+## App Setup
 
 ```bash
 bash ~/dotfiles/setup-new-mac/install-apps.sh
-bash ~/dotfiles/setup-new-mac/install-quick-look-plugins.sh
-bash ~/dotfiles/setup-new-mac/macos-improvements.sh
-bash ~/dotfiles/setup-new-mac/make-symlinks.sh
-bash ~/dotfiles/setup-new-mac/install-cli-tools.sh
 ```
 
 ## Dev Setup
