@@ -6,6 +6,7 @@
 source ~/dotfiles/setup-new-mac/_config.sh
 
 apps=(
+  git                   # override mac's
   cyberduck             # ftp tool
   homebrew/cask/docker  # development environments
   fork                  # git mananger

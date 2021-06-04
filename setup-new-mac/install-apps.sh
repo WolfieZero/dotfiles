@@ -6,6 +6,7 @@
 source ~/dotfiles/setup-new-mac/_config.sh
 
 apps=(
+  htop                     # terminal system monitor
   appcleaner               # removes apps
   dozer                    # tidy toolbar
   imagealpha               # optimise transparent pngs
