@@ -25,7 +25,7 @@ alias unzip='tar -jxvf $1'  # unzip this-file.tar
 # ------------------------------------------------------------------------------
 
 alias top="htop"
-alias top-original-="/usr/bin/top"
+alias top--original-="/usr/bin/top"
 
 # Git
 # ------------------------------------------------------------------------------
@@ -44,19 +44,6 @@ alias stopenv="deactivate"
 
 alias artisan="php artisan"
 alias valet-open="e ~/.valet"
-
-# iOS devices
-# ------------------------------------------------------------------------------
-# https://www.npmjs.com/package/ios-sim
-
-alias device-show-all="npx ios-sim showdevicetypes"
-
-alias device-iPhone8="npx ios-sim start --devicetypeid com.apple.CoreSimulator.SimDeviceType.iPhone-8"
-alias device-iPhone8-plus="npx ios-sim start --devicetypeid com.apple.CoreSimulator.SimDeviceType.iPhone-8-Plus"
-
-alias device-iPhone11="npx ios-sim start --devicetypeid com.apple.CoreSimulator.SimDeviceType.iPhone-11"
-alias device-iPhone11-Pro="npx ios-sim start --devicetypeid com.apple.CoreSimulator.SimDeviceType.iPhone-11-Pro"
-alias device-iPhone-11-Pro-Max="npx ios-sim start --devicetypeid com.apple.CoreSimulator.SimDeviceType.iPhone-11-Pro-Max"
 
 # Other
 # ------------------------------------------------------------------------------
