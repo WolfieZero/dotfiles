@@ -9,3 +9,5 @@ tools=(
   imagemagick
   exa
 )
+
+brew_install_multiple "${tools[@]}"
