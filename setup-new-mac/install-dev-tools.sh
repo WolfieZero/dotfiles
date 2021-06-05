@@ -18,6 +18,4 @@ apps=(
   # sqlectron             # generic db tool
 )
 
-brew install docker --cask # docker
-
 brew_install_multiple "${apps[@]}"
