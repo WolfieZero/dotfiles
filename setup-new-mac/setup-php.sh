@@ -3,12 +3,21 @@
 # Setup PHP
 # ------------------------------------------------------------------------------
 
-brew install php
-brew install brew-php-switcher
-brew install php-cs-fixer
+# brew install openssl
 
-rm -f ~/.php_cs
-ln -s ~/dotfiles/.php_cs ~/.php_cs
+apps=(
+  php@7.4
+  php-cs-fixer
+  virtualbox
+  vagrant
+)
+
+brew_install_multiple "${apps[@]}"
+
+vagrant plugin install vagrant-hostmanager
+
+# rm -f ~/.php_cs
+# ln -s ~/dotfiles/.php_cs ~/.php_cs
 
 # Install Composer
 curl -sS https://getcomposer.org/installer | php
