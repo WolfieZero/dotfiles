@@ -6,8 +6,9 @@
 source ~/dotfiles/setup-new-mac/_config.sh
 
 tools=(
-  imagemagick
-  exa
+  htop         # terminal system monitor
+  imagemagick  #
+  exa          #
 )
 
 brew_install_multiple "${tools[@]}"
