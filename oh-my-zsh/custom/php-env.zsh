@@ -4,7 +4,7 @@
 function homestead() {
   case "$1" in
     'edit')
-      code ~/Homestead/Homestead.yaml
+      code ~/Homestead
     ;;
     'start')
       (cd ~/Homestead; vagrant up)
