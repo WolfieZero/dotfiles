@@ -1,7 +1,7 @@
 <?php
 
 return PhpCsFixer\Config::create()
-    ->setRules(array(
+    ->setRules([
         '@PSR2' => true,
         'array_syntax' => array('syntax' => 'short'),
         'combine_consecutive_unsets' => true,
@@ -88,7 +88,7 @@ return PhpCsFixer\Config::create()
         'trim_array_spaces' => true,
         'unary_operator_spaces' => true,
         'whitespace_after_comma_in_array' => true,
-    ))
+    ])
     //->setIndent("\t")
     ->setLineEnding("\n")
 ;

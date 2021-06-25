@@ -9,3 +9,6 @@ indent_style = space
 
 [*.snippets]
 indent_style = tab
+
+[.php_cs]
+indent_size = 4
