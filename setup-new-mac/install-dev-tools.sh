@@ -25,7 +25,12 @@ apps=(
   #Browser
   browserosaurus           # browser picker
   firefox-developer-edition
-  homebrew/cask-versions/google-chrome-dev
+  # homebrew/cask-versions/google-chrome-dev
+  google-chrome
+
+  # Design
+  figma
+
 )
 
 brew_install_multiple "${apps[@]}"

@@ -15,6 +15,8 @@ apps=(
   spotify                   # music
   homebrew/cask/syncthing   # sync files locally
   atext                     # text completion
+  rectangle                 # window control
+  # ticktick                  # task managment
 
   # Chats
   slack
@@ -24,3 +26,7 @@ apps=(
 )
 
 brew_install_multiple "${apps[@]}"
+
+echo 'App Store Installables'
+echo '----------------------'
+echo ' - TickTick'

@@ -3,13 +3,11 @@
 # Setup PHP
 # ------------------------------------------------------------------------------
 
-# brew install openssl
-
 apps=(
   php@7.4
-  php-cs-fixer
   virtualbox
   vagrant
+  # openssl
 )
 
 brew_install_multiple "${apps[@]}"
@@ -22,3 +20,11 @@ vagrant plugin install vagrant-hostmanager
 # Install Composer
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
+
+# Install Composer packages
+composer global require "squizlabs/php_codesniffer=*"
+
+echo 'App Store Installables'
+echo '----------------------'
+echo ' - Affinity Photo'
+echo ' - Affinity Designer'
