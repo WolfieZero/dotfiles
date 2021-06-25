@@ -22,11 +22,6 @@ bash ~/dotfiles/setup-new-mac/make-symlinks.sh
 bash ~/dotfiles/setup-new-mac/install-cli-tools.sh
 bash ~/dotfiles/setup-new-mac/install-quick-look-plugins.sh
 bash ~/dotfiles/setup-new-mac/macos-improvements.sh
-```
-
-## App Setup
-
-```bash
 bash ~/dotfiles/setup-new-mac/install-apps.sh
 ```
 
@@ -47,6 +42,8 @@ bash ~/dotfiles/setup-new-mac/setup-node.sh
 ```bash
 bash ~/dotfiles/setup-new-mac/setup-php.sh
 ```
+
+
 
 ### Python
 
