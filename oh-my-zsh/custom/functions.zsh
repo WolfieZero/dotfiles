@@ -108,3 +108,10 @@ cd
   # Create default code folder
   mkdir Code/$LOWER_NAME
 }
+
+# Make and change directory
+# ------------------------------------------------------------------------------
+
+function mcd() {
+    mkdir "$@" && cd "$@"
+}
